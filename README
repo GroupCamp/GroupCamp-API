@@ -1,0 +1,7 @@
+You'll find here some pieces of code showing how to use the
+GroupCamp public provisionning API.
+
+Manifest:
+- group.py shows, based on standard Python libraries, how to create
+  a project and add users in that project.
+
