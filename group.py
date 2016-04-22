@@ -89,10 +89,30 @@ def insert_user(group_id, email) :
 	else :
 		print "Added member in the group"
 
+def user_teams(email) :
+	res = do_call('GET', '/core/v1/user/'+email+'/teams', '')
+	if res.status != 200 :
+		print "Failed"
+		return 'failed'
+
+	body = res.read()
+	data = json.loads(body)
+	for team in data['result'] :
+		if team['is_tech'] :
+			management = " is a management team"
+		else :
+			management = ""
+		print "Team '"+team['name']+"' having UUID = "+team['id']+management
+	return data
+
 
 team_uuid = 'Get it from the GroupCamp user interface'
 gcat_name = 'Main category'
+user_email = 'jean@localhost'
 group_id = new_project('The new group 3', 'This group have been created via the provisionning API', 'invite', False, gcat_name, team_uuid)
 if group_id != 'failed' :
-	insert_user(group_id, 'jean@localhost')
+	insert_user(group_id, user_email)
+
+print "The user '"+user_email+"' is a member of the following teams:"
+user_teams(user_email)
 

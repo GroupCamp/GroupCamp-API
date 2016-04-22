@@ -1,0 +1,137 @@
+<html><body>
+
+<p><a href="index.html">Module</a></p>
+
+<p><a href="../index.html">Main page</a></p>
+
+
+<h1 id="10">GET on core/v1/user/[User]/teams</h1>
+
+<h2>Description</h2>
+
+
+<p>Returns the list of all teams having this user as a member</p>
+
+
+
+<h2>Parameters in the URL</h2>
+<p>In the URL, here are the expected values</p>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td>User</td>
+	<td>Uuid</td>
+	<td>The UUID of a user</td>
+</tr>
+
+</table>
+
+
+
+
+
+
+
+<h2>Return value</h2>
+
+<p>This method returns a JSON structure. An array, all elements are of type Object </p>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td>id</td>
+	<td>Uuid</td>
+	<td>UUID of the team</td>
+</tr>
+
+<tr>
+	<td>name</td>
+	<td>String</td>
+	<td>The name of the team, as if should be shown on the interface</td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>Const( = team )</td>
+	<td>Constant, must be 'team'</td>
+</tr>
+
+<tr>
+	<td>state</td>
+	<td>Enum(ok)</td>
+	<td>The current state of this team, there is no trash for teams, they are deleted immediately</td>
+</tr>
+
+<tr>
+	<td>picture</td>
+	<td><a href="../types/Picture.html">Picture</a></td>
+	<td>The team's picture</td>
+</tr>
+
+<tr>
+	<td>description</td>
+	<td>String</td>
+	<td>The team's description</td>
+</tr>
+
+<tr>
+	<td>is_tech</td>
+	<td>Boolean</td>
+	<td>Is a Management team</td>
+</tr>
+
+</table>
+
+
+
+
+
+<h2>Possible errors</h2>
+<table>
+<tr>
+	<th>HTTP Starus</th>
+	<th>Name</th>
+	<th>Optional detail</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td>400</td>
+	<td>bad_request</td>
+	<td>error_id</td>
+	<td>Bad Request. Please check ids in the URL path of your request.
+		
+	</td>
+</tr>
+
+<tr>
+	<td>403</td>
+	<td>forbidden</td>
+	<td>access_forbidden</td>
+	<td>The requested item cannot be accessed by the current user
+		
+	</td>
+</tr>
+
+<tr>
+	<td>404</td>
+	<td>not_found</td>
+	<td></td>
+	<td>Requested element was not found for the current user
+		
+	</td>
+</tr>
+
+</table>
+
+
+</body></html>

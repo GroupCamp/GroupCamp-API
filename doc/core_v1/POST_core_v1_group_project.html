@@ -1,0 +1,181 @@
+<html><body>
+
+<p><a href="index.html">Module</a></p>
+
+<p><a href="../index.html">Main page</a></p>
+
+
+<h1 id="13">POST on core/v1/group/project</h1>
+
+<h2>Description</h2>
+
+
+<p>Creates a new group of type 'project'.</p>
+
+
+
+
+
+
+
+<h2>Body of the request</h2>
+
+<p>This method requires a JSON object to be transmited in the body of the request.</p>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td>name</td>
+	<td>String</td>
+	<td>The name of the group to be created. Must be unique accross the groups in the same GroupCamp account.</td>
+</tr>
+
+<tr>
+	<td>description</td>
+	<td>String</td>
+	<td>The description of the group, can be left empty.</td>
+</tr>
+
+<tr>
+	<td>category_name</td>
+	<td>String</td>
+	<td>The name of the category for this project. Category MUST exist. Name is case-sentitive.</td>
+</tr>
+
+<tr>
+	<td>management_team</td>
+	<td>Uuid</td>
+	<td>The UUID of the managing team if there is one for that project.</td>
+</tr>
+
+<tr>
+	<td>access</td>
+	<td>Enum(invite,open)</td>
+	<td>Access control rule used for that group</td>
+</tr>
+
+<tr>
+	<td>with_guests</td>
+	<td>Boolean</td>
+	<td>Can users of type 'guest' be member of this group</td>
+</tr>
+
+</table>
+
+
+
+
+<h2>Return value</h2>
+
+<p>This method returns a JSON structure. An anonymous generic object</p>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td>id</td>
+	<td>Uuid</td>
+	<td>The UUID of the group</td>
+</tr>
+
+<tr>
+	<td>name</td>
+	<td>String</td>
+	<td>The name of the group</td>
+</tr>
+
+<tr>
+	<td>type</td>
+	<td>Const( = group )</td>
+	<td>The type of the object</td>
+</tr>
+
+<tr>
+	<td>gtype</td>
+	<td>Enum(project,intranet,extranet,social,apps,track,loc,pre,paff,si,crm,owner,sa)</td>
+	<td>The group's type</td>
+</tr>
+
+<tr>
+	<td>state</td>
+	<td>Enum(archi,ok,del,trash)</td>
+	<td>The current state of this group</td>
+</tr>
+
+<tr>
+	<td>description</td>
+	<td>String</td>
+	<td>The group's description</td>
+</tr>
+
+<tr>
+	<td>starred</td>
+	<td>Integer</td>
+	<td>If the group is starred for current user, the order of it</td>
+</tr>
+
+<tr>
+	<td>can_accept_guest</td>
+	<td>Boolean</td>
+	<td>If the group can accept guest members</td>
+</tr>
+
+<tr>
+	<td>nb_users</td>
+	<td>Integer</td>
+	<td>The number of users inside that group</td>
+</tr>
+
+</table>
+
+
+
+
+
+<h2>Possible errors</h2>
+<table>
+<tr>
+	<th>HTTP Starus</th>
+	<th>Name</th>
+	<th>Optional detail</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td>400</td>
+	<td>bad_request</td>
+	<td>error_json</td>
+	<td>Bad Request. Please check that the body of your request is a valid json object.
+		
+	</td>
+</tr>
+
+<tr>
+	<td>400</td>
+	<td>bad_request</td>
+	<td>error_body_data</td>
+	<td>Bad Request. Please check the request's body.
+		
+	</td>
+</tr>
+
+<tr>
+	<td>403</td>
+	<td>forbidden</td>
+	<td>access_forbidden</td>
+	<td>The requested item cannot be accessed by the current user
+		
+	</td>
+</tr>
+
+</table>
+
+
+</body></html>
