@@ -5,12 +5,12 @@
 <p><a href="../index.html">Main page</a></p>
 
 
-<h1 id="13">POST on core/v1/group/project</h1>
+<h1 id="14">POST on core/v1/group/project/[Group]</h1>
 
 <h2>Description</h2>
 
 
-<p>Creates a new group of type 'project'.</p>
+<p>Modifies a group of type 'project'.</p>
 
 
 
@@ -151,8 +151,8 @@
 <tr>
 	<td>400</td>
 	<td>bad_request</td>
-	<td>error_body_data</td>
-	<td>Bad Request. Please check the request's body.
+	<td>error_json</td>
+	<td>Bad Request. Please check that the body of your request is a valid json object.
 		
 	</td>
 </tr>
@@ -160,8 +160,17 @@
 <tr>
 	<td>400</td>
 	<td>bad_request</td>
-	<td>error_json</td>
-	<td>Bad Request. Please check that the body of your request is a valid json object.
+	<td>error_id</td>
+	<td>Bad Request. Please check ids in the URL path of your request.
+		
+	</td>
+</tr>
+
+<tr>
+	<td>400</td>
+	<td>bad_request</td>
+	<td>error_body_data</td>
+	<td>Bad Request. Please check the request's body.
 		
 	</td>
 </tr>
