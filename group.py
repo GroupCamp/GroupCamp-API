@@ -125,6 +125,15 @@ def insert_user(group_id, email) :
 		print "Added member in the group"
 
 
+def remove_user(group_id, email) :
+	res = do_call('DELETE', '/core/v1/group/'+group_id+'/user/'+email, '')
+	status = res.status
+	if status != 200 :
+		print "Removing member failed";
+	else :
+		print "Removed member from the group"
+
+
 def user_teams(email) :
 	res = do_call('GET', '/core/v1/user/'+email+'/teams', '')
 	if res.status != 200 :

@@ -1,0 +1,98 @@
+<html><body>
+
+<p><a href="index.html">Module</a></p>
+
+<p><a href="../index.html">Main page</a></p>
+
+
+<h1 id="16">DELETE on core/v1/group/[Group]/user/[User]</h1>
+
+<h2>Description</h2>
+
+
+<p>Removes a user from a group</p>
+
+
+
+<h2>Parameters in the URL</h2>
+<p>In the URL, here are the expected values</p>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td>Group</td>
+	<td>Uuid</td>
+	<td>The UUID of a group</td>
+</tr>
+
+<tr>
+	<td>User</td>
+	<td>Uuid</td>
+	<td>The UUID of a user</td>
+</tr>
+
+</table>
+
+
+
+
+
+
+
+<h2>Return value</h2>
+
+<p>This method returns a JSON structure. An anonymous generic object</p>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td>value</td>
+	<td>Const( = ok )</td>
+	<td>The response if everything went well</td>
+</tr>
+
+</table>
+
+
+
+
+
+<h2>Possible errors</h2>
+<table>
+<tr>
+	<th>HTTP Starus</th>
+	<th>Name</th>
+	<th>Optional detail</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td>400</td>
+	<td>bad_request</td>
+	<td>error_id</td>
+	<td>Bad Request. Please check ids in the URL path of your request.
+		
+	</td>
+</tr>
+
+<tr>
+	<td>403</td>
+	<td>forbidden</td>
+	<td>access_forbidden</td>
+	<td>The requested item cannot be accessed by the current user
+		
+	</td>
+</tr>
+
+</table>
+
+
+</body></html>
