@@ -121,6 +121,7 @@ def insert_user(group_id, email) :
 	status = res.status
 	if status != 200 :
 		print "Adding member failed"
+		print "Raw answer ", res.read()
 	else :
 		print "Added member in the group"
 
@@ -130,6 +131,7 @@ def remove_user(group_id, email) :
 	status = res.status
 	if status != 200 :
 		print "Removing member failed";
+		print "Raw answer ", res.read()
 	else :
 		print "Removed member from the group"
 
