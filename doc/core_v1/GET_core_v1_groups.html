@@ -1,0 +1,119 @@
+<html><body>
+
+<p><a href="index.html">Module</a></p>
+
+<p><a href="../index.html">Main page</a></p>
+
+
+<h1 id="13">GET on core/v1/groups</h1>
+
+<h2>Description</h2>
+
+
+<p>Returns informations about the groups matching the search criteria provided in the GET arguments. Incompatible search criterias will return an empty list without a warning.</p>
+
+
+
+
+
+<h2>Parameters in GET</h2>
+<p>Here are the possible/expected query parameters.</p>
+<table>
+<tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+</tr>
+
+<tr>
+        <td>gtype</td>
+        <td>Enum(project, intranet, extranet)</td>
+        <td>The type of group</td>
+</tr>
+
+<tr>
+        <td>name</td>
+        <td>String</td>
+        <td>Any group having exactly this name will be returned</td>
+</tr>
+
+<tr>
+        <td>search</td>
+        <td>String</td>
+        <td>Any group which have this text in its name will be returned</td>
+</tr>
+
+<tr>
+        <td>user</td>
+        <td>Uuid</td>
+        <td>Only groups which have this user among its members will be returned</td>
+</tr>
+
+<tr>
+        <td>category_name</td>
+        <td>String</td>
+        <td>Only group in a category having exactly this name will be returned</td>
+</tr>
+
+<tr>
+        <td>project_type</td>
+        <td>Enum(internal, customer)</td>
+        <td>Only project will be returned, and only if their project_type is matching</td>
+</tr>
+
+<tr>
+        <td>state</td>
+        <td>Enum(all, ok, archi, del, trash)</td>
+        <td>Only groups in the given state will be returned. If this filter is not provided, only groups in the state 'ok' are returned, thus to get all the groups, a filter set on 'all' is required</td>
+</tr>
+
+</table>
+
+
+
+
+
+<h2>Return value</h2>
+
+<p>This method returns a JSON structure. An array, all elements are of type <a href="../types/SimpleGroup.html">SimpleGroup</a> </p>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td></td>
+	<td><a href="../types/SimpleGroup.html">SimpleGroup</a></td>
+	<td></td>
+</tr>
+
+</table>
+
+
+
+
+
+<h2>Possible errors</h2>
+<table>
+<tr>
+	<th>HTTP Starus</th>
+	<th>Name</th>
+	<th>Optional detail</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td>400</td>
+	<td>bad_request</td>
+	<td>get_parameter_error</td>
+	<td>At least one of the GET parameters is wrong or missing
+		
+	</td>
+</tr>
+
+</table>
+
+
+</body></html>

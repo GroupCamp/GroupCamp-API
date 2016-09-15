@@ -5,7 +5,7 @@
 <p><a href="../index.html">Main page</a></p>
 
 
-<h1 id="14">POST on core/v1/group/project/[Group]</h1>
+<h1 id="15">POST on core/v1/group/project/[Group]</h1>
 
 <h2>Description</h2>
 
@@ -35,6 +35,12 @@
 </tr>
 
 <tr>
+	<td>external_ref</td>
+	<td>String</td>
+	<td>The external reference. Must be unique.</td>
+</tr>
+
+<tr>
 	<td>description</td>
 	<td>String</td>
 	<td>The description of the group, can be left empty.</td>
@@ -54,7 +60,7 @@
 
 <tr>
 	<td>access</td>
-	<td>Enum(invite,open)</td>
+	<td>Enum(invite, open)</td>
 	<td>Access control rule used for that group</td>
 </tr>
 
@@ -99,13 +105,13 @@
 
 <tr>
 	<td>gtype</td>
-	<td>Enum(project,intranet,extranet,social,apps,track,loc,pre,paff,si,crm,owner,sa)</td>
+	<td>Enum(project, intranet, extranet)</td>
 	<td>The group's type</td>
 </tr>
 
 <tr>
 	<td>state</td>
-	<td>Enum(archi,ok,del,trash)</td>
+	<td>Enum(archi, ok, del, trash)</td>
 	<td>The current state of this group</td>
 </tr>
 

@@ -1,0 +1,95 @@
+<html><body>
+
+<p><a href="index.html">Module</a></p>
+
+<p><a href="../index.html">Main page</a></p>
+
+
+<h1 id="1">GET on core/v1/users</h1>
+
+<h2>Description</h2>
+
+
+<p>Return all the users of the account, filtered according to the GET arguments received.</p>
+
+
+
+
+
+<h2>Parameters in GET</h2>
+<p>Here are the possible/expected query parameters.</p>
+<table>
+<tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+</tr>
+
+<tr>
+        <td>state</td>
+        <td>String</td>
+        <td>Filter selected users on their state.</td>
+</tr>
+
+<tr>
+        <td>user_type</td>
+        <td>String</td>
+        <td>Filter selected users on the user type.</td>
+</tr>
+
+<tr>
+        <td>is_leader</td>
+        <td><a href="../search/FilterGroupType.html">FilterGroupType</a></td>
+        <td>Only returns users who are leaders of that type of group</td>
+</tr>
+
+</table>
+
+
+
+
+
+<h2>Return value</h2>
+
+<p>This method returns a JSON structure. An array, all elements are of type <a href="../types/SimpleUser.html">SimpleUser</a> </p>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td></td>
+	<td><a href="../types/SimpleUser.html">SimpleUser</a></td>
+	<td></td>
+</tr>
+
+</table>
+
+
+
+
+
+<h2>Possible errors</h2>
+<table>
+<tr>
+	<th>HTTP Starus</th>
+	<th>Name</th>
+	<th>Optional detail</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td>400</td>
+	<td>bad_request</td>
+	<td>get_parameter_error</td>
+	<td>At least one of the GET parameters is wrong or missing
+		
+	</td>
+</tr>
+
+</table>
+
+
+</body></html>
