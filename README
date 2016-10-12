@@ -1,5 +1,5 @@
 You'll find here some pieces of code showing how to use the
-GroupCamp public provisionning API.
+GroupCamp public provisioning API.
 
 Manifest:
 - group.py shows, based on standard Python libraries, how to create
