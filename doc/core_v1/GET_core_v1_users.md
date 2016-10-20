@@ -37,7 +37,7 @@ This method returns a JSON structure. An array, all elements are of type <a href
 
 Name   |  Type   |  Description
 -------|---------|-------------
- | [SimpleUser](../types/SimpleUser.md) | 
+ | [SimpleUser](../types/SimpleUser.md) | Each element of the Array
 
 
 

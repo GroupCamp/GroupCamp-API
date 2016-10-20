@@ -41,6 +41,12 @@
 </tr>
 
 <tr>
+	<td>project_code</td>
+	<td>String</td>
+	<td>The project code.</td>
+</tr>
+
+<tr>
 	<td>description</td>
 	<td>String</td>
 	<td>The description of the group, can be left empty.</td>
@@ -50,6 +56,24 @@
 	<td>category_name</td>
 	<td>String</td>
 	<td>The name of the category for this project. Category MUST exist. Name is case-sentitive.</td>
+</tr>
+
+<tr>
+	<td>leader1</td>
+	<td>Uuid</td>
+	<td>The UUID of the project-manager</td>
+</tr>
+
+<tr>
+	<td>leader2</td>
+	<td>Uuid</td>
+	<td>The UUID of the deputy project-manager</td>
+</tr>
+
+<tr>
+	<td>managers</td>
+	<td>Array(Uuid)</td>
+	<td>The UUIDs of other additional project managers</td>
 </tr>
 
 <tr>

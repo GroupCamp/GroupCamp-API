@@ -63,6 +63,9 @@ def new_project(name, description, access, guests, gcat_name, management_team):
 		'access' : access,
 		'with_guests' : guests,
 		'category_name' : gcat_name,
+#		'leader1' : 'UUID or e-mail',
+#		'leader2' : 'UUID or e-mail',
+#		'managers' : [ 'UUID or e-mail', ... ],
 		'management_team' : team_uuid
 	}
 	body = json.dumps(data)

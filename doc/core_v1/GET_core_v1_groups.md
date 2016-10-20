@@ -41,7 +41,7 @@ This method returns a JSON structure. An array, all elements are of type <a href
 
 Name   |  Type   |  Description
 -------|---------|-------------
- | [SimpleGroup](../types/SimpleGroup.md) | 
+ | [SimpleGroup](../types/SimpleGroup.md) | Each element of the Array
 
 
 
