@@ -26,13 +26,13 @@ Name   |  Type   |   Description
 -------|---------|--------------
 name | String | The name of the group to be created. Must be unique accross the groups in the same GroupCamp account.
 external_ref | String | The external reference. Must be unique.
-project_code | String | The project code.
+project_code | String | The project code. Must be unique. Set to an empty value to remove the existing code from a project.
 description | String | The description of the group, can be left empty.
 category_name | String | The name of the category for this project. Category MUST exist. Name is case-sentitive.
 leader1 | Uuid | The UUID of the project-manager
 leader2 | Uuid | The UUID of the deputy project-manager
 managers | Array(Uuid) | The UUIDs of other additional project managers
-management_team | Uuid | The UUID of the managing team if there is one for that project.
+management_team | Uuid | The UUID of the managing team if there is one for that project. The value 'none' instead of an UUID will remove the managing_team from an existing project.
 access | Enum(invite, open) | Access control rule used for that group
 with_guests | Boolean | Can users of type 'guest' be member of this group
 

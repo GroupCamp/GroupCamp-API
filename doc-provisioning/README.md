@@ -1,5 +1,4 @@
-<html><body>
-# Index of GroupCamp API public documentation accessible via interface __provisioning__'
+# Index of GroupCamp API public documentation accessible via interface __'provisioning'__
 
 ## Available modules:
 

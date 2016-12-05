@@ -1,0 +1,92 @@
+<html><body>
+
+<p><a href="index.html">The known types</a></p>
+
+<p><a href="../index.html">Main page</a></p>
+
+<h1>The definition of type Timelog</h1>
+
+<table>
+<tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+</tr>
+
+<tr>
+        <td>id</td>
+        <td>Uuid</td>
+        <td>The UUID of time log</td>
+</tr>
+
+<tr>
+        <td>name</td>
+        <td>String</td>
+        <td>The description of the time log</td>
+</tr>
+
+<tr>
+        <td>date</td>
+        <td>Date</td>
+        <td>The date of the time log</td>
+</tr>
+
+<tr>
+        <td>user</td>
+        <td>Alternative(<a href="../types/Nobody.html">Nobody</a>, <a href="../types/SimpleUser.html">SimpleUser</a>)</td>
+        <td>The user affected to the time log</td>
+</tr>
+
+<tr>
+        <td>time_unit</td>
+        <td>Enum(s, d)</td>
+        <td>The default time_unit to use. Depends on the request you made. For example, on a user based request, it will be the time unit for the user. On a project based request, it will be the project time unit.</td>
+</tr>
+
+<tr>
+        <td>duration</td>
+        <td><a href="../types/Duration.html">Duration</a></td>
+        <td>The time spent</td>
+</tr>
+
+<tr>
+        <td>creation_date</td>
+        <td>DateTime</td>
+        <td>The create date of the time log</td>
+</tr>
+
+<tr>
+        <td>modification_date</td>
+        <td>DateTime</td>
+        <td>The modification date of the time log</td>
+</tr>
+
+<tr>
+        <td>modification_user</td>
+        <td><a href="../types/SimpleUser.html">SimpleUser</a></td>
+        <td>The user who modified the time log</td>
+</tr>
+
+<tr>
+        <td>billable</td>
+        <td>Boolean</td>
+        <td>If the time log is billable. Null if not applicable</td>
+</tr>
+
+<tr>
+        <td>owner</td>
+        <td>Alternative(<a href="../types/SimpleGroup.html">SimpleGroup</a>, <a href="../types/SimpleTimelogCategory.html">SimpleTimelogCategory</a>)</td>
+        <td>The owner of the time log. Can be a group, or a time log category. If it is a group, the group must have the time log application enabled.</td>
+</tr>
+
+<tr>
+        <td>category</td>
+        <td><a href="../types/SimpleTimelogCategory.html">SimpleTimelogCategory</a></td>
+        <td>Only applicable if the owner is a project group. The project category for the time log.</td>
+</tr>
+
+</table>
+
+
+</body></html>
+

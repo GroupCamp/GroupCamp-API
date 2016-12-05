@@ -17,9 +17,9 @@ In the two previous examples **All** and **Empty** are bases and **type1** and *
 
 Name     |  Description 
 ---------|--------------
-Multi | The 'Multi' base contains all the type of groups which can appear multiple times in a given account
 All | The 'All' base contains all types for the filter
 Empty | The 'Empty' base contains no preset elements
+Multi | The 'Multi' base contains all the type of groups which can appear multiple times in a given account
 
 
 ### Declared elements for FilterGroupType

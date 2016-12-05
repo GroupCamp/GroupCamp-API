@@ -43,7 +43,7 @@
 <tr>
 	<td>project_code</td>
 	<td>String</td>
-	<td>The project code.</td>
+	<td>The project code. Must be unique. Set to an empty value to remove the existing code from a project.</td>
 </tr>
 
 <tr>
@@ -79,7 +79,7 @@
 <tr>
 	<td>management_team</td>
 	<td>Uuid</td>
-	<td>The UUID of the managing team if there is one for that project.</td>
+	<td>The UUID of the managing team if there is one for that project. The value 'none' instead of an UUID will remove the managing_team from an existing project.</td>
 </tr>
 
 <tr>

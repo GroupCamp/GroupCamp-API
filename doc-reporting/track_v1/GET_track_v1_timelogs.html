@@ -1,0 +1,182 @@
+<html><body>
+
+<p><a href="index.html">Module</a></p>
+
+<p><a href="../index.html">Main page</a></p>
+
+
+<h1 id="113">GET on track/v1/timelogs</h1>
+
+<h2>Description</h2>
+
+
+<p>Returns all the TimeLogs matching the search criterions.</p>
+
+
+
+
+
+<h2>Parameters in GET</h2>
+<p>Here are the possible/expected query parameters.</p>
+<table>
+<tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+</tr>
+
+<tr>
+        <td>start</td>
+        <td>Date</td>
+        <td>Return timelogs after this date</td>
+</tr>
+
+<tr>
+        <td>end</td>
+        <td>Date</td>
+        <td>Return timelogs before this date. The maximum date range allowed from start to end is 42 days (6 weeks).</td>
+</tr>
+
+</table>
+
+
+
+
+
+<h2>Return value</h2>
+
+<p>This method returns a JSON structure. An array, all elements are of type <a href="../types/Timelog.html">Timelog</a> </p>
+<table>
+<tr>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td>id</td>
+	<td>Uuid</td>
+	<td>The UUID of time log</td>
+</tr>
+
+<tr>
+	<td>name</td>
+	<td>String</td>
+	<td>The description of the time log</td>
+</tr>
+
+<tr>
+	<td>date</td>
+	<td>Date</td>
+	<td>The date of the time log</td>
+</tr>
+
+<tr>
+	<td>user</td>
+	<td>Alternative(<a href="../types/Nobody.html">Nobody</a>, <a href="../types/SimpleUser.html">SimpleUser</a>)</td>
+	<td>The user affected to the time log</td>
+</tr>
+
+<tr>
+	<td>time_unit</td>
+	<td>Enum(s, d)</td>
+	<td>The default time_unit to use. Depends on the request you made. For example, on a user based request, it will be the time unit for the user. On a project based request, it will be the project time unit.</td>
+</tr>
+
+<tr>
+	<td>duration</td>
+	<td><a href="../types/Duration.html">Duration</a></td>
+	<td>The time spent</td>
+</tr>
+
+<tr>
+	<td>creation_date</td>
+	<td>DateTime</td>
+	<td>The create date of the time log</td>
+</tr>
+
+<tr>
+	<td>modification_date</td>
+	<td>DateTime</td>
+	<td>The modification date of the time log</td>
+</tr>
+
+<tr>
+	<td>modification_user</td>
+	<td><a href="../types/SimpleUser.html">SimpleUser</a></td>
+	<td>The user who modified the time log</td>
+</tr>
+
+<tr>
+	<td>billable</td>
+	<td>Boolean</td>
+	<td>If the time log is billable. Null if not applicable</td>
+</tr>
+
+<tr>
+	<td>owner</td>
+	<td>Alternative(<a href="../types/SimpleGroup.html">SimpleGroup</a>, <a href="../types/SimpleTimelogCategory.html">SimpleTimelogCategory</a>)</td>
+	<td>The owner of the time log. Can be a group, or a time log category. If it is a group, the group must have the time log application enabled.</td>
+</tr>
+
+<tr>
+	<td>category</td>
+	<td><a href="../types/SimpleTimelogCategory.html">SimpleTimelogCategory</a></td>
+	<td>Only applicable if the owner is a project group. The project category for the time log.</td>
+</tr>
+
+</table>
+
+
+
+
+
+<h2>Possible errors</h2>
+<table>
+<tr>
+	<th>HTTP Starus</th>
+	<th>Name</th>
+	<th>Optional detail</th>
+	<th>Description</th>
+</tr>
+
+<tr>
+	<td>400</td>
+	<td>bad_request</td>
+	<td>error_body_data</td>
+	<td>Bad Request. Please check the request's body.
+		
+	</td>
+</tr>
+
+<tr>
+	<td>400</td>
+	<td>bad_request</td>
+	<td>get_parameter_error</td>
+	<td>At least one of the GET parameters is wrong or missing
+		
+	</td>
+</tr>
+
+<tr>
+	<td>403</td>
+	<td>forbidden</td>
+	<td>access_forbidden</td>
+	<td>The requested item cannot be accessed by the current user
+		
+	</td>
+</tr>
+
+<tr>
+	<td>410</td>
+	<td>gone</td>
+	<td>gone</td>
+	<td>This temporary item have gone away. You should start again to create the temporary item again.
+		
+	</td>
+</tr>
+
+</table>
+
+
+</body></html>
