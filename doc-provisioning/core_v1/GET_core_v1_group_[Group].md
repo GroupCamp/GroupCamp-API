@@ -54,8 +54,8 @@ description_color | Enum(default, green, orange, red) | The color to use for the
 can_accept_guest | Boolean | If the group can accept guest members
 nb_users | Integer | The number of users inside that group
 dates | Object | The dates that group
-start | Date | When the project start
-end | Date | When the project end
+dates.start | Date | When the project start
+dates.end | Date | When the project end
 
 
 

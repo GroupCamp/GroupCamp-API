@@ -35,6 +35,15 @@ managers | Array(Uuid) | The UUIDs of other additional project managers
 management_team | Uuid | The UUID of the managing team if there is one for that project. The value 'none' instead of an UUID will remove the managing_team from an existing project.
 access | Enum(invite, open) | Access control rule used for that group
 with_guests | Boolean | Can users of type 'guest' be member of this group
+template | Object | To use a group as a template
+template.id | Uuid | The UUID of the group used as a template. It's settings will be copied.
+template.members | Boolean | Copy the members of the template-group in the new group.
+template.track | Boolean | Copy the budget and authorised time categories
+template.topics | Boolean | Copy the topics of the 'discussion' application
+template.files | Object | How to handle files (Files in the folder "Shared with the group" are ignored)
+template.files.folders | Boolean | Copy the folders tree
+template.files.owned | Boolean | Copy the files owned by the group (requires folders tree)
+template.files.others | Boolean | Link into the new group the files listed in the template-group's folders, but not owned by it (requires folders tree)
 
 
 

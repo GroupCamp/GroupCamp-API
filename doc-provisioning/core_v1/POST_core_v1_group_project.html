@@ -94,6 +94,60 @@
 	<td>Can users of type 'guest' be member of this group</td>
 </tr>
 
+<tr>
+	<td>template</td>
+	<td>Object</td>
+	<td>To use a group as a template</td>
+</tr>
+
+<tr>
+	<td>template.id</td>
+	<td>Uuid</td>
+	<td>The UUID of the group used as a template. It's settings will be copied.</td>
+</tr>
+
+<tr>
+	<td>template.members</td>
+	<td>Boolean</td>
+	<td>Copy the members of the template-group in the new group.</td>
+</tr>
+
+<tr>
+	<td>template.track</td>
+	<td>Boolean</td>
+	<td>Copy the budget and authorised time categories</td>
+</tr>
+
+<tr>
+	<td>template.topics</td>
+	<td>Boolean</td>
+	<td>Copy the topics of the 'discussion' application</td>
+</tr>
+
+<tr>
+	<td>template.files</td>
+	<td>Object</td>
+	<td>How to handle files (Files in the folder "Shared with the group" are ignored)</td>
+</tr>
+
+<tr>
+	<td>template.files.folders</td>
+	<td>Boolean</td>
+	<td>Copy the folders tree</td>
+</tr>
+
+<tr>
+	<td>template.files.owned</td>
+	<td>Boolean</td>
+	<td>Copy the files owned by the group (requires folders tree)</td>
+</tr>
+
+<tr>
+	<td>template.files.others</td>
+	<td>Boolean</td>
+	<td>Link into the new group the files listed in the template-group's folders, but not owned by it (requires folders tree)</td>
+</tr>
+
 </table>
 
 
