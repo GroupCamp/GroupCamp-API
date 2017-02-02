@@ -66,6 +66,17 @@ def new_project(name, description, access, guests, gcat_name, management_team):
 #		'leader1' : 'UUID or e-mail',
 #		'leader2' : 'UUID or e-mail',
 #		'managers' : [ 'UUID or e-mail', ... ],
+#		'template' : {
+#			'id'      : 'UUID of an existing project',
+#			'track'   : 1,   # Will copy the budget informations
+#			'members' : 1,   # Will copy the members
+#			'topics'  : 1,   # Will copy the topics from 'Discussion' application
+#			'files' : {
+#				'folders' : 1, # Will copy the foldes-tree
+#				'owned'   : 1, # Will copy the files owned by the project (required 'folders')
+#				'others'  : 1, # Will copy the other files
+#			}
+#		},
 		'management_team' : team_uuid
 	}
 	body = json.dumps(data)

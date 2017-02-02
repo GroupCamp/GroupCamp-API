@@ -79,6 +79,7 @@ HTTP Starus | Name   | Optional detail   | Description
 400 | bad_request | error_body_data | Bad Request. Please check the request's body.	
 400 | bad_request | error_json | Bad Request. Please check that the body of your request is a valid json object.	
 403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user	
+403 | forbidden | over_group_quota | You have reach the group quota of your space	
 
 
 
