@@ -49,7 +49,7 @@ def do_call (method, path, body, q_string='') :
 	if method == 'GET' and q_string != '':
 		path = path + '?' + q_string
 
-	cnx = httplib.HTTPSConnection('api.mustrum.groupcamp.test', 443)
+	cnx = httplib.HTTPSConnection('api.groupcamp.com', 443)
 	cnx.request(method, path, body, headers)
 	res = cnx.getresponse()
 	return res
@@ -118,7 +118,9 @@ def get_all_lines(method, path, body, query_string) :
 
 def get_tlogs(start_date, end_date):
         res = do_call('GET', '/track/v1/timelogs', '', 'start='+start_date+'&end='+end_date)
-	pp.pprint(result)
+        body = res.read();
+        data = json.loads(body)
+        pp.pprint(data)
 
 # Get logs for precisely one week
 get_tlogs('2016-10-24','2016-10-30')
