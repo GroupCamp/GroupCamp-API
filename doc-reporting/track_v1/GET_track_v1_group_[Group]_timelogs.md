@@ -52,7 +52,7 @@ date | Date | The date of the time log
 user | Alternative([Nobody](../types/Nobody.md), [SimpleUser](../types/SimpleUser.md)) | The user affected to the time log
 time_unit | Enum(s, d) | The default time_unit to use. Depends on the request you made. For example, on a user based request, it will be the time unit for the user. On a project based request, it will be the project time unit.
 duration | [Duration](../types/Duration.md) | The time spent
-creation_date | DateTime | The create date of the time log
+creation_date | DateTime | The creation date of the time log
 modification_date | DateTime | The modification date of the time log
 modification_user | [SimpleUser](../types/SimpleUser.md) | The user who modified the time log
 billable | Boolean | If the time log is billable. Null if not applicable
