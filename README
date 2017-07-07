@@ -1,9 +1,0 @@
-You'll find here some pieces of code showing how to use the
-GroupCamp public provisioning and reporting APIs.
-
-Manifest:
-- group.py shows, based on standard Python libraries, how to create
-  a project and add users in that project.
-- track.py shows how to fetch time-logs from the GroupCamp
-  application
-
