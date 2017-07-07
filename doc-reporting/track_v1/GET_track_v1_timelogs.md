@@ -32,7 +32,7 @@ end | Date | Return timelogs before this date. The maximum date range allowed fr
 ## Return value
 
 
-This method returns a JSON structure. An array, all elements are of type <a href="../types/Timelog.html">Timelog</a> 
+This method returns a JSON structure. An array, all elements are of type [Timelog](../types/Timelog.md) 
 
 Name   |  Type   |  Description
 -------|---------|-------------

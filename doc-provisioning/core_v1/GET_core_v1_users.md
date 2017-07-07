@@ -33,7 +33,7 @@ is_leader | [FilterGroupType](../search/FilterGroupType.md) | Only returns users
 ## Return value
 
 
-This method returns a JSON structure. An array, all elements are of type <a href="../types/SimpleUser.html">SimpleUser</a> 
+This method returns a JSON structure. An array, all elements are of type [SimpleUser](../types/SimpleUser.md) 
 
 Name   |  Type   |  Description
 -------|---------|-------------

@@ -37,7 +37,7 @@ state | Enum(all, ok, archi, del, trash) | Only groups in the given state will b
 ## Return value
 
 
-This method returns a JSON structure. An array, all elements are of type <a href="../types/SimpleGroup.html">SimpleGroup</a> 
+This method returns a JSON structure. An array, all elements are of type [SimpleGroup](../types/SimpleGroup.md) 
 
 Name   |  Type   |  Description
 -------|---------|-------------
