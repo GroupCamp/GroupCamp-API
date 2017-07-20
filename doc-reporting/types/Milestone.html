@@ -1,0 +1,80 @@
+<html><body>
+
+<p><a href="index.html">The known types</a></p>
+
+<p><a href="../index.html">Main page</a></p>
+
+<h1>The definition of type Milestone</h1>
+
+<table>
+<tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+</tr>
+
+<tr>
+        <td>id</td>
+        <td>Uuid</td>
+        <td>The UUID of the milestone</td>
+</tr>
+
+<tr>
+        <td>name</td>
+        <td>String</td>
+        <td>The name of the milestone</td>
+</tr>
+
+<tr>
+        <td>group</td>
+        <td><a href="../types/SimpleGroup.html">SimpleGroup</a></td>
+        <td>The group where the milestone is</td>
+</tr>
+
+<tr>
+        <td>description</td>
+        <td>String</td>
+        <td>The description of the milestone</td>
+</tr>
+
+<tr>
+        <td>is_private</td>
+        <td>Boolean</td>
+        <td>True if the milsetone is private</td>
+</tr>
+
+<tr>
+        <td>is_open</td>
+        <td>Boolean</td>
+        <td>True if the milestone is not completed</td>
+</tr>
+
+<tr>
+        <td>date</td>
+        <td>Date</td>
+        <td>The date of the milestone</td>
+</tr>
+
+<tr>
+        <td>user</td>
+        <td>Alternative(<a href="../types/Nobody.html">Nobody</a>, <a href="../types/SimpleUser.html">SimpleUser</a>)</td>
+        <td>The person responsible of that milestone</td>
+</tr>
+
+<tr>
+        <td>user.maybe[0]</td>
+        <td><a href="../types/Nobody.html">Nobody</a></td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
+        <td>user.maybe[1]</td>
+        <td><a href="../types/SimpleUser.html">SimpleUser</a></td>
+        <td>Alternative</td>
+</tr>
+
+</table>
+
+
+</body></html>
+

@@ -1,0 +1,164 @@
+<html><body>
+
+<p><a href="index.html">The known types</a></p>
+
+<p><a href="../index.html">Main page</a></p>
+
+<h1>The definition of type Task</h1>
+
+<table>
+<tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+</tr>
+
+<tr>
+        <td>id</td>
+        <td>Uuid</td>
+        <td>The UUID of the task</td>
+</tr>
+
+<tr>
+        <td>name</td>
+        <td>String</td>
+        <td>The name of the task</td>
+</tr>
+
+<tr>
+        <td>description</td>
+        <td>String</td>
+        <td>The description of the task</td>
+</tr>
+
+<tr>
+        <td>list</td>
+        <td><a href="../types/TaskList.html">TaskList</a></td>
+        <td>The task-list of the task</td>
+</tr>
+
+<tr>
+        <td>creation_date</td>
+        <td>DateTime</td>
+        <td>The creation date of the task</td>
+</tr>
+
+<tr>
+        <td>creator</td>
+        <td><a href="../types/SimpleUser.html">SimpleUser</a></td>
+        <td>The creator of the task</td>
+</tr>
+
+<tr>
+        <td>is_open</td>
+        <td>Boolean</td>
+        <td>True if the task is not finished</td>
+</tr>
+
+<tr>
+        <td>affects</td>
+        <td>Array(<a href="../types/TaskAffect.html">TaskAffect</a>)</td>
+        <td>The list of affects</td>
+</tr>
+
+<tr>
+        <td>begin</td>
+        <td>Alternative(Object, Object)</td>
+        <td>The beginning date of the task</td>
+</tr>
+
+<tr>
+        <td>begin.maybe[0]</td>
+        <td>Object</td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
+        <td>begin.maybe[0].type</td>
+        <td>Const( = date )</td>
+        <td>The type of the echeance</td>
+</tr>
+
+<tr>
+        <td>begin.maybe[0].date</td>
+        <td>Date</td>
+        <td>The date of the echeance</td>
+</tr>
+
+<tr>
+        <td>begin.maybe[1]</td>
+        <td>Object</td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
+        <td>begin.maybe[1].type</td>
+        <td>Const( = empty )</td>
+        <td>The type of the echeance</td>
+</tr>
+
+<tr>
+        <td>end</td>
+        <td>Alternative(Object, Object, Object)</td>
+        <td>The end date of the task</td>
+</tr>
+
+<tr>
+        <td>end.maybe[0]</td>
+        <td>Object</td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
+        <td>end.maybe[0].type</td>
+        <td>Const( = date )</td>
+        <td>The type of the echeance</td>
+</tr>
+
+<tr>
+        <td>end.maybe[0].date</td>
+        <td>Date</td>
+        <td>The date of the echeance</td>
+</tr>
+
+<tr>
+        <td>end.maybe[1]</td>
+        <td>Object</td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
+        <td>end.maybe[1].type</td>
+        <td>Const( = milestone )</td>
+        <td>The type of the echeance</td>
+</tr>
+
+<tr>
+        <td>end.maybe[1].date</td>
+        <td>Date</td>
+        <td>The date of the echeance</td>
+</tr>
+
+<tr>
+        <td>end.maybe[1].id</td>
+        <td>Uuid</td>
+        <td>The milestone the echeance is linked to</td>
+</tr>
+
+<tr>
+        <td>end.maybe[2]</td>
+        <td>Object</td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
+        <td>end.maybe[2].type</td>
+        <td>Const( = empty )</td>
+        <td>The type of the echeance</td>
+</tr>
+
+</table>
+
+
+</body></html>
+

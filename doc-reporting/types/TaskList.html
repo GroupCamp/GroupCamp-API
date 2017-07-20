@@ -1,0 +1,74 @@
+<html><body>
+
+<p><a href="index.html">The known types</a></p>
+
+<p><a href="../index.html">Main page</a></p>
+
+<h1>The definition of type TaskList</h1>
+
+<table>
+<tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+</tr>
+
+<tr>
+        <td>id</td>
+        <td>Uuid</td>
+        <td>The UUID of the task-list</td>
+</tr>
+
+<tr>
+        <td>name</td>
+        <td>String</td>
+        <td>The name of the task-list</td>
+</tr>
+
+<tr>
+        <td>group</td>
+        <td><a href="../types/SimpleGroup.html">SimpleGroup</a></td>
+        <td>The group where the task-list is</td>
+</tr>
+
+<tr>
+        <td>description</td>
+        <td>String</td>
+        <td>The description of the task-list</td>
+</tr>
+
+<tr>
+        <td>milestone</td>
+        <td>Alternative(<a href="../types/Nothing.html">Nothing</a>, <a href="../types/Milestone.html">Milestone</a>)</td>
+        <td>If the task-list is linked to a milestone, that milestone (if the linked milestone is private then the privacy is forced on the task list)</td>
+</tr>
+
+<tr>
+        <td>milestone.maybe[0]</td>
+        <td><a href="../types/Nothing.html">Nothing</a></td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
+        <td>milestone.maybe[1]</td>
+        <td><a href="../types/Milestone.html">Milestone</a></td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
+        <td>is_private</td>
+        <td>Boolean</td>
+        <td>True if the task-list is private</td>
+</tr>
+
+<tr>
+        <td>is_closed</td>
+        <td>Boolean</td>
+        <td>True if the task-list was closed</td>
+</tr>
+
+</table>
+
+
+</body></html>
+

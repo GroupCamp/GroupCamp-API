@@ -38,6 +38,18 @@
 </tr>
 
 <tr>
+        <td>user.maybe[0]</td>
+        <td><a href="../types/Nobody.html">Nobody</a></td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
+        <td>user.maybe[1]</td>
+        <td><a href="../types/SimpleUser.html">SimpleUser</a></td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
         <td>time_unit</td>
         <td>Enum(s, d)</td>
         <td>The default time_unit to use. Depends on the request you made. For example, on a user based request, it will be the time unit for the user. On a project based request, it will be the project time unit.</td>
@@ -80,9 +92,57 @@
 </tr>
 
 <tr>
+        <td>owner.maybe[0]</td>
+        <td><a href="../types/SimpleGroup.html">SimpleGroup</a></td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
+        <td>owner.maybe[1]</td>
+        <td><a href="../types/SimpleTimelogCategory.html">SimpleTimelogCategory</a></td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
         <td>category</td>
         <td><a href="../types/SimpleTimelogCategory.html">SimpleTimelogCategory</a></td>
         <td>Only applicable if the owner is a project group. The project category for the time log.</td>
+</tr>
+
+<tr>
+        <td>object</td>
+        <td>Alternative(<a href="../types/Nothing.html">Nothing</a>, Object)</td>
+        <td>The object on which the timelog is assigned</td>
+</tr>
+
+<tr>
+        <td>object.maybe[0]</td>
+        <td><a href="../types/Nothing.html">Nothing</a></td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
+        <td>object.maybe[1]</td>
+        <td>Object</td>
+        <td>Alternative</td>
+</tr>
+
+<tr>
+        <td>object.maybe[1].id</td>
+        <td>Uuid</td>
+        <td>UUID of a task</td>
+</tr>
+
+<tr>
+        <td>object.maybe[1].type</td>
+        <td>Const( = task )</td>
+        <td>Object type</td>
+</tr>
+
+<tr>
+        <td>object.maybe[1].appli</td>
+        <td>Const( = task )</td>
+        <td>Object application</td>
 </tr>
 
 </table>

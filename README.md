@@ -9,6 +9,8 @@ GroupCamp public provisioning and reporting APIs.
   a project and add users in that project.
 * track.py shows how to fetch time-logs from the GroupCamp
   application
+* task.py shows how to fetch informations about some elements in
+  the reporting API (typicaly a task related to a time-log entry)
 
 ## Interfaces:
 
