@@ -9,13 +9,15 @@
 
 <h2>Description</h2>
 
+<p>https://api.groupcamp.com/core/v1/group/[Group]/user/[User]</p>
+
 
 <p>Removes a user from a group</p>
 
 
 
-<h2>Parameters in the URL</h2>
-<p>In the URL, here are the expected values</p>
+<h2>URL parameters</h2>
+<p>Expected values</p>
 <table>
 <tr>
 	<th>Name</th>
@@ -65,10 +67,10 @@
 
 
 
-<h2>Possible errors</h2>
+<h2>Errors</h2>
 <table>
 <tr>
-	<th>HTTP Starus</th>
+	<th>HTTP Status</th>
 	<th>Name</th>
 	<th>Optional detail</th>
 	<th>Description</th>
@@ -78,7 +80,7 @@
 	<td>400</td>
 	<td>bad_request</td>
 	<td>error_id</td>
-	<td>Bad Request. Please check ids in the URL path of your request.
+	<td>Bad Request. Please check IDs in the URL path of your request.
 		
 	</td>
 </tr>
@@ -87,7 +89,7 @@
 	<td>403</td>
 	<td>forbidden</td>
 	<td>access_forbidden</td>
-	<td>The requested item cannot be accessed by the current user
+	<td>The requested item cannot be accessed by the current user.
 		
 	</td>
 </tr>
@@ -96,7 +98,7 @@
 	<td>404</td>
 	<td>not_found</td>
 	<td></td>
-	<td>Requested element was not found for the current user
+	<td>Requested element was not found for the current user.
 		
 	</td>
 </tr>

@@ -9,6 +9,8 @@
 
 <h2>Description</h2>
 
+<p>https://api.groupcamp.com/core/v1/group/project</p>
+
 
 <p>Creates a new group of type 'project'.</p>
 
@@ -18,7 +20,7 @@
 
 
 
-<h2>Body of the request</h2>
+<h2>Request body</h2>
 
 <p>This method requires a JSON object to be transmited in the body of the request.</p>
 <table>
@@ -223,10 +225,10 @@
 
 
 
-<h2>Possible errors</h2>
+<h2>Errors</h2>
 <table>
 <tr>
-	<th>HTTP Starus</th>
+	<th>HTTP Status</th>
 	<th>Name</th>
 	<th>Optional detail</th>
 	<th>Description</th>
@@ -236,7 +238,7 @@
 	<td>400</td>
 	<td>bad_request</td>
 	<td>error_body_data</td>
-	<td>Bad Request. Please check the request's body.
+	<td>Bad Request. Please check the request body.
 		
 	</td>
 </tr>
@@ -254,7 +256,7 @@
 	<td>403</td>
 	<td>forbidden</td>
 	<td>access_forbidden</td>
-	<td>The requested item cannot be accessed by the current user
+	<td>The requested item cannot be accessed by the current user.
 		
 	</td>
 </tr>

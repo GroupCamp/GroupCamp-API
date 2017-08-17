@@ -3,7 +3,7 @@
 
 [Main page](../README.md)
 
-# The definition of type Nobody
+# Nobody type definition
 
 Name    |   Type  |  Description
 --------|---------|-------------

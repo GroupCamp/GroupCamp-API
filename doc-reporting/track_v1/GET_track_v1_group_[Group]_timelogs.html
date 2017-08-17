@@ -9,13 +9,15 @@
 
 <h2>Description</h2>
 
-
-<p>Returns timelogs in the target group</p>
-
+<p>https://api.groupcamp.com/track/v1/group/[Group]/timelogs</p>
 
 
-<h2>Parameters in the URL</h2>
-<p>In the URL, here are the expected values</p>
+<p>Get time spent records from a group.</p>
+
+
+
+<h2>URL parameters</h2>
+<p>Expected values</p>
 <table>
 <tr>
 	<th>Name</th>
@@ -33,8 +35,8 @@
 
 
 
-<h2>Parameters in GET</h2>
-<p>Here are the possible/expected query parameters.</p>
+<h2>GET parameters</h2>
+<p>Optional or required query parameters.</p>
 <table>
 <tr>
         <th>Name</th>
@@ -45,13 +47,13 @@
 <tr>
         <td>start</td>
         <td>Date</td>
-        <td>Return timelogs after this date</td>
+        <td>Return time spent records after this date</td>
 </tr>
 
 <tr>
         <td>end</td>
         <td>Date</td>
-        <td>Return timelogs before this date</td>
+        <td>Return time spent records before this date</td>
 </tr>
 
 </table>
@@ -73,25 +75,25 @@
 <tr>
 	<td>id</td>
 	<td>Uuid</td>
-	<td>The UUID of time log</td>
+	<td>Time spent record UUID.</td>
 </tr>
 
 <tr>
 	<td>name</td>
 	<td>String</td>
-	<td>The description of the time log</td>
+	<td>Record description.</td>
 </tr>
 
 <tr>
 	<td>date</td>
 	<td>Date</td>
-	<td>The date of the time log</td>
+	<td>Record date</td>
 </tr>
 
 <tr>
 	<td>user</td>
 	<td>Alternative(<a href="../types/Nobody.html">Nobody</a>, <a href="../types/SimpleUser.html">SimpleUser</a>)</td>
-	<td>The user affected to the time log</td>
+	<td>Returns a SimpleUser object or the Nobody object. User who has spent time.</td>
 </tr>
 
 <tr>
@@ -115,37 +117,37 @@
 <tr>
 	<td>duration</td>
 	<td><a href="../types/Duration.html">Duration</a></td>
-	<td>The time spent</td>
+	<td>Time spent record duration.</td>
 </tr>
 
 <tr>
 	<td>creation_date</td>
 	<td>DateTime</td>
-	<td>The creation date of the time log</td>
+	<td>Record  creation date.</td>
 </tr>
 
 <tr>
 	<td>modification_date</td>
 	<td>DateTime</td>
-	<td>The modification date of the time log</td>
+	<td>Record update date.</td>
 </tr>
 
 <tr>
 	<td>modification_user</td>
 	<td><a href="../types/SimpleUser.html">SimpleUser</a></td>
-	<td>The user who modified the time log</td>
+	<td>User who last updated the record.</td>
 </tr>
 
 <tr>
 	<td>billable</td>
 	<td>Boolean</td>
-	<td>If the time log is billable. Null if not applicable</td>
+	<td>True when the time spent record is billable. Null if not applicable</td>
 </tr>
 
 <tr>
 	<td>owner</td>
 	<td>Alternative(<a href="../types/SimpleGroup.html">SimpleGroup</a>, <a href="../types/SimpleTimelogCategory.html">SimpleTimelogCategory</a>)</td>
-	<td>The owner of the time log. Can be a group, or a time log category. If it is a group, the group must have the time log application enabled.</td>
+	<td>Time spent record owner. Can be a group, or a time category (administrative time category). The Timelog app must be enabled in the group.</td>
 </tr>
 
 <tr>
@@ -163,13 +165,13 @@
 <tr>
 	<td>category</td>
 	<td><a href="../types/SimpleTimelogCategory.html">SimpleTimelogCategory</a></td>
-	<td>Only applicable if the owner is a project group. The project category for the time log.</td>
+	<td>Project time category. Only applicable if the owner is a group.</td>
 </tr>
 
 <tr>
 	<td>object</td>
 	<td>Alternative(<a href="../types/Nothing.html">Nothing</a>, Object)</td>
-	<td>The object on which the timelog is assigned</td>
+	<td>The object on which the time spent record has been recorded.</td>
 </tr>
 
 <tr>
@@ -187,19 +189,19 @@
 <tr>
 	<td>object.maybe[1].id</td>
 	<td>Uuid</td>
-	<td>UUID of a task</td>
+	<td>Task UUID</td>
 </tr>
 
 <tr>
 	<td>object.maybe[1].type</td>
 	<td>Const( = task )</td>
-	<td>Object type</td>
+	<td>Constant. Object type. Set to 'task'.</td>
 </tr>
 
 <tr>
 	<td>object.maybe[1].appli</td>
 	<td>Const( = task )</td>
-	<td>Object application</td>
+	<td>Constant. Application name. Set to 'task'.</td>
 </tr>
 
 </table>
@@ -208,10 +210,10 @@
 
 
 
-<h2>Possible errors</h2>
+<h2>Errors</h2>
 <table>
 <tr>
-	<th>HTTP Starus</th>
+	<th>HTTP Status</th>
 	<th>Name</th>
 	<th>Optional detail</th>
 	<th>Description</th>
@@ -221,7 +223,7 @@
 	<td>400</td>
 	<td>bad_request</td>
 	<td>error_id</td>
-	<td>Bad Request. Please check ids in the URL path of your request.
+	<td>Bad Request. Please check IDs in the URL path of your request.
 		
 	</td>
 </tr>
@@ -230,7 +232,7 @@
 	<td>400</td>
 	<td>bad_request</td>
 	<td>get_parameter_error</td>
-	<td>At least one of the GET parameters is wrong or missing
+	<td>At least one of the GET parameters is wrong or missing.
 		
 	</td>
 </tr>
@@ -239,7 +241,7 @@
 	<td>403</td>
 	<td>forbidden</td>
 	<td>access_forbidden</td>
-	<td>The requested item cannot be accessed by the current user
+	<td>The requested item cannot be accessed by the current user.
 		
 	</td>
 </tr>
@@ -248,7 +250,7 @@
 	<td>410</td>
 	<td>gone</td>
 	<td>gone</td>
-	<td>This temporary item have gone away. You should start again to create the temporary item again.
+	<td>This temporary item has gone away. You should start again to re-create the temporary item.
 		
 	</td>
 </tr>

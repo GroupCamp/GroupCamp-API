@@ -3,7 +3,7 @@
 
 [Main page](../README.md)
 
-# The definition of type Nothing
+# Nothing type definition
 
 Name    |   Type  |  Description
 --------|---------|-------------

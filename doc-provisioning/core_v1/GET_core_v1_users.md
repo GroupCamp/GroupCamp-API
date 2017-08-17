@@ -8,6 +8,8 @@
 
 ## Description
 
+https://api.groupcamp.com/core/v1/users
+
 
 Return all the users of the account, filtered according to the GET arguments received.
 
@@ -15,15 +17,15 @@ Return all the users of the account, filtered according to the GET arguments rec
 
 
 
-## Parameters in GET
+## GET parameters
 
-Here are the possible/expected query parameters.
+Optional or required values.
 
-Name    |  Type   |  Description 
---------|---------|--------------
-state | String | Filter selected users on their state.
-user_type | String | Filter selected users on the user type.
-is_leader | [FilterGroupType](../search/FilterGroupType.md) | Only returns users who are leaders of that type of group
+Name    |  Mandatory    |   Type   |  Description 
+--------|---------------|----------|---------------
+state | Optional | String | Filter selected users on their state.
+user_type | Optional | String | Filter selected users on the user type.
+is_leader | Optional | [FilterGroupType](../search/FilterGroupType.md) | Only returns users who are leaders of that type of group
 
 
 
@@ -44,12 +46,12 @@ Name   |  Type   |  Description
 
 
 
-## Possible errors
+## Errors
 
 
-HTTP Starus | Name   | Optional detail   | Description  
+HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------
-400 | bad_request | get_parameter_error | At least one of the GET parameters is wrong or missing	
+400 | bad_request | get_parameter_error | At least one of the GET parameters is wrong or missing.
 
 
 

@@ -3,7 +3,7 @@
 
 [Main page](../README.md)
 
-# The definition of type Task
+# Task type definition
 
 Name    |   Type  |  Description
 --------|---------|-------------
@@ -15,21 +15,21 @@ creation_date | DateTime | The creation date of the task
 creator | [SimpleUser](../types/SimpleUser.md) | The creator of the task
 is_open | Boolean | True if the task is not finished
 affects | Array([TaskAffect](../types/TaskAffect.md)) | The list of affects
-begin | Alternative(Object, Object) | The beginning date of the task
+begin | Alternative(Object, Object) | Task start date. Can be an empty object when the task has no start date, or an object with a date.
 begin.maybe[0] | Object | Alternative
-begin.maybe[0].type | Const( = date ) | The type of the echeance
-begin.maybe[0].date | Date | The date of the echeance
+begin.maybe[0].type | Const( = date ) | Constant. Set to 'date' when the task has a date.
+begin.maybe[0].date | Date | Task date.
 begin.maybe[1] | Object | Alternative
-begin.maybe[1].type | Const( = empty ) | The type of the echeance
-end | Alternative(Object, Object, Object) | The end date of the task
+begin.maybe[1].type | Const( = empty ) | Constant. Set to 'empty' when the task has no date.
+end | Alternative(Object, Object, Object) | Task end date. Can be an empty object when the task has no due date, an object with a date, or an object with the UUID of a milestone.
 end.maybe[0] | Object | Alternative
-end.maybe[0].type | Const( = date ) | The type of the echeance
-end.maybe[0].date | Date | The date of the echeance
+end.maybe[0].type | Const( = date ) | Constant. Set to 'date' when the task has a date.
+end.maybe[0].date | Date | Task date.
 end.maybe[1] | Object | Alternative
-end.maybe[1].type | Const( = milestone ) | The type of the echeance
-end.maybe[1].date | Date | The date of the echeance
-end.maybe[1].id | Uuid | The milestone the echeance is linked to
+end.maybe[1].type | Const( = milestone ) | Constant. Set to 'milestone' when the task has an end date which is the due date of a milesonte.
+end.maybe[1].date | Date | The due date of the related milestone.
+end.maybe[1].id | Uuid | Milestone UUID. The milestone is linked to the TaskList where the task is.
 end.maybe[2] | Object | Alternative
-end.maybe[2].type | Const( = empty ) | The type of the echeance
+end.maybe[2].type | Const( = empty ) | Constant. Set to 'empty' when the task has no date.
 
 

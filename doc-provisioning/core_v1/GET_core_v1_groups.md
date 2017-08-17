@@ -8,6 +8,8 @@
 
 ## Description
 
+https://api.groupcamp.com/core/v1/groups
+
 
 Returns informations about the groups matching the search criteria provided in the GET arguments. Incompatible search criterias will return an empty list without a warning.
 
@@ -15,19 +17,19 @@ Returns informations about the groups matching the search criteria provided in t
 
 
 
-## Parameters in GET
+## GET parameters
 
-Here are the possible/expected query parameters.
+Optional or required values.
 
-Name    |  Type   |  Description 
---------|---------|--------------
-gtype | Enum(project, intranet, extranet) | The type of group
-name | String | Any group having exactly this name will be returned
-search | String | Any group which have this text in its name will be returned
-user | Uuid | Only groups which have this user among its members will be returned
-category_name | String | Only group in a category having exactly this name will be returned
-project_type | Enum(internal, customer) | Only project will be returned, and only if their project_type is matching
-state | Enum(all, ok, archi, del, trash) | Only groups in the given state will be returned. If this filter is not provided, only groups in the state 'ok' are returned, thus to get all the groups, a filter set on 'all' is required
+Name    |  Mandatory    |   Type   |  Description 
+--------|---------------|----------|---------------
+gtype | Optional | Enum(project, intranet, extranet) | The type of group
+name | Optional | String | Any group having exactly this name will be returned
+search | Optional | String | Any group which have this text in its name will be returned
+user | Optional | Uuid | Only groups which have this user among its members will be returned
+category_name | Optional | String | Only group in a category having exactly this name will be returned
+project_type | Optional | Enum(internal, customer) | Only project will be returned, and only if their project_type is matching
+state | Optional | Enum(all, ok, archi, del, trash) | Only groups in the given state will be returned. If this filter is not provided, only groups in the state 'ok' are returned, thus to get all the groups, a filter set on 'all' is required
 
 
 
@@ -48,12 +50,12 @@ Name   |  Type   |  Description
 
 
 
-## Possible errors
+## Errors
 
 
-HTTP Starus | Name   | Optional detail   | Description  
+HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------
-400 | bad_request | get_parameter_error | At least one of the GET parameters is wrong or missing	
+400 | bad_request | get_parameter_error | At least one of the GET parameters is wrong or missing.
 
 
 

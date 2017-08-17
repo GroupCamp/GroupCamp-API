@@ -8,14 +8,16 @@
 
 ## Description
 
+https://api.groupcamp.com/core/v1/group/[Group]
+
 
 Return the group.
 
 
 
-## Parameters in the URL
+## URL parameters
 
-In the URL, here are the expected values
+Expected values
 
 Name   | Type    | Description
 -------|---------|------------
@@ -36,7 +38,7 @@ This method returns a JSON structure. An anonymous generic object
 
 Name   |  Type   |  Description
 -------|---------|-------------
-id | Uuid | The UUID of the group
+id | Uuid | Group UUID.
 name | String | The name of the group. Can contain the Project Code, if appropriate.
 group_name | String | The raw group name. Without any Project Code
 type | Const( = group ) | The type of the object
@@ -62,14 +64,14 @@ dates.end | Date | When the project end
 
 
 
-## Possible errors
+## Errors
 
 
-HTTP Starus | Name   | Optional detail   | Description  
+HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------
-400 | bad_request | error_id | Bad Request. Please check ids in the URL path of your request.	
-403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user	
-404 | not_found |  | Requested element was not found for the current user	
+400 | bad_request | error_id | Bad Request. Please check IDs in the URL path of your request.
+403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user.
+404 | not_found |  | Requested element was not found for the current user.
 
 
 

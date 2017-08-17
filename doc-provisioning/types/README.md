@@ -1,6 +1,6 @@
 [Main page](../README.md)
 
-# List of known types
+# List of known types for this interface
 
 * [Picture](./Picture.md)
 * [SimpleGcat](./SimpleGcat.md)

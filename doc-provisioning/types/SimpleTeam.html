@@ -4,7 +4,7 @@
 
 <p><a href="../index.html">Main page</a></p>
 
-<h1>The definition of type SimpleTeam</h1>
+<h1>SimpleTeam type definition</h1>
 
 <table>
 <tr>
@@ -16,31 +16,31 @@
 <tr>
         <td>id</td>
         <td>Uuid</td>
-        <td>UUID of the team</td>
+        <td>Team UUID.</td>
 </tr>
 
 <tr>
         <td>name</td>
         <td>String</td>
-        <td>The name of the team, as if should be shown on the interface</td>
+        <td>Team name. As shown in the UI.</td>
 </tr>
 
 <tr>
         <td>type</td>
         <td>Const( = team )</td>
-        <td>Constant, must be 'team'</td>
+        <td>Constant. Must be 'team'.</td>
 </tr>
 
 <tr>
         <td>state</td>
         <td>Enum(ok)</td>
-        <td>The current state of this team, there is no trash for teams, they are deleted immediately</td>
+        <td>Current team status. There is no trash for teams, teams are deleted immediately.</td>
 </tr>
 
 <tr>
         <td>is_management</td>
         <td>Boolean</td>
-        <td>True if the team is a management team</td>
+        <td>True if the team is a management team.</td>
 </tr>
 
 </table>

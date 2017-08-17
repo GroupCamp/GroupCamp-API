@@ -3,7 +3,7 @@
 
 [Main page](../README.md)
 
-# The definition of type Picture
+# Picture type definition
 
 Name    |   Type  |  Description
 --------|---------|-------------

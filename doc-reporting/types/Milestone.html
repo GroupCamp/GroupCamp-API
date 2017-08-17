@@ -4,7 +4,7 @@
 
 <p><a href="../index.html">Main page</a></p>
 
-<h1>The definition of type Milestone</h1>
+<h1>Milestone type definition</h1>
 
 <table>
 <tr>
@@ -16,49 +16,49 @@
 <tr>
         <td>id</td>
         <td>Uuid</td>
-        <td>The UUID of the milestone</td>
+        <td>Milestone UUID.</td>
 </tr>
 
 <tr>
         <td>name</td>
         <td>String</td>
-        <td>The name of the milestone</td>
+        <td>Milestone name.</td>
 </tr>
 
 <tr>
         <td>group</td>
         <td><a href="../types/SimpleGroup.html">SimpleGroup</a></td>
-        <td>The group where the milestone is</td>
+        <td>Group owner. A SimpleGroup object.</td>
 </tr>
 
 <tr>
         <td>description</td>
         <td>String</td>
-        <td>The description of the milestone</td>
+        <td>Milestone description.</td>
 </tr>
 
 <tr>
         <td>is_private</td>
         <td>Boolean</td>
-        <td>True if the milsetone is private</td>
+        <td>True when the milsetone is private.</td>
 </tr>
 
 <tr>
         <td>is_open</td>
         <td>Boolean</td>
-        <td>True if the milestone is not completed</td>
+        <td>True if the milestone is open (not completed).</td>
 </tr>
 
 <tr>
         <td>date</td>
         <td>Date</td>
-        <td>The date of the milestone</td>
+        <td>Milestone date.</td>
 </tr>
 
 <tr>
         <td>user</td>
         <td>Alternative(<a href="../types/Nobody.html">Nobody</a>, <a href="../types/SimpleUser.html">SimpleUser</a>)</td>
-        <td>The person responsible of that milestone</td>
+        <td>A SimpleUser object or the Nobody object. Milestone owner (assigned user).</td>
 </tr>
 
 <tr>

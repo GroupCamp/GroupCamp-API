@@ -8,14 +8,16 @@
 
 ## Description
 
+https://api.groupcamp.com/core/v1/group/[Group]/user/[User]
+
 
 Adds a user as member in a group
 
 
 
-## Parameters in the URL
+## URL parameters
 
-In the URL, here are the expected values
+Expected values
 
 Name   | Type    | Description
 -------|---------|------------
@@ -44,14 +46,14 @@ value | Const( = ok ) | The response if everything went well
 
 
 
-## Possible errors
+## Errors
 
 
-HTTP Starus | Name   | Optional detail   | Description  
+HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------
-400 | bad_request | error_id | Bad Request. Please check ids in the URL path of your request.	
-403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user	
-404 | not_found |  | Requested element was not found for the current user	
+400 | bad_request | error_id | Bad Request. Please check IDs in the URL path of your request.
+403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user.
+404 | not_found |  | Requested element was not found for the current user.
 
 
 

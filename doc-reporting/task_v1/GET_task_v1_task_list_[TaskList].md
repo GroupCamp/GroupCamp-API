@@ -8,18 +8,20 @@
 
 ## Description
 
+https://api.groupcamp.com/task/v1/task_list/[TaskList]
+
 
 Return the task-list.
 
 
 
-## Parameters in the URL
+## URL parameters
 
-In the URL, here are the expected values
+Expected values
 
 Name   | Type    | Description
 -------|---------|------------
-TaskList | Uuid | The UUID of a task list
+TaskList | Uuid | TaskList UUID.
 
 
 
@@ -32,20 +34,20 @@ TaskList | Uuid | The UUID of a task list
 ## Return value
 
 
-This method returns an object of type [TaskList](../types/TaskList.md).
+This method returns a [TaskList](../types/TaskList.md) object.
 
 
 
 
 
-## Possible errors
+## Errors
 
 
-HTTP Starus | Name   | Optional detail   | Description  
+HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------
-400 | bad_request | error_id | Bad Request. Please check ids in the URL path of your request.	
-403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user	
-404 | not_found |  | Requested element was not found for the current user	
+400 | bad_request | error_id | Bad Request. Please check IDs in the URL path of your request.
+403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user.
+404 | not_found |  | Requested element was not found for the current user.
 
 
 

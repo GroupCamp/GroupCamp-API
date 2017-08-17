@@ -4,7 +4,7 @@
 
 <p><a href="../index.html">Main page</a></p>
 
-<h1>The definition of type SimpleOrga</h1>
+<h1>SimpleOrga type definition</h1>
 
 <table>
 <tr>
@@ -16,37 +16,37 @@
 <tr>
         <td>id</td>
         <td>Uuid</td>
-        <td>UUID of the organization</td>
+        <td>Organization UUID.</td>
 </tr>
 
 <tr>
         <td>name</td>
         <td>String</td>
-        <td>The name of the organization, as it should be shown on the interface. May contain the names of the up-stream organizations.</td>
+        <td>Organization name. As shown in the UI. May contain the names of the up-stream organizations.</td>
 </tr>
 
 <tr>
         <td>type</td>
         <td>Const( = orga )</td>
-        <td>Constant, must be 'orga'</td>
+        <td>Constant. Must be 'orga'.</td>
 </tr>
 
 <tr>
         <td>otype</td>
         <td>Enum(internal, invited)</td>
-        <td>The organization's type.</td>
+        <td>Type of organization.</td>
 </tr>
 
 <tr>
         <td>state</td>
         <td>Enum(ok, del)</td>
-        <td>The organization's current state.</td>
+        <td>Current organization status.</td>
 </tr>
 
 <tr>
         <td>picture</td>
         <td><a href="../types/Picture.html">Picture</a></td>
-        <td>The organization's picture</td>
+        <td>Picture of the organization.</td>
 </tr>
 
 </table>

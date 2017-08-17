@@ -3,11 +3,11 @@
 
 [Main page](../README.md)
 
-# The definition of type Duration
+# Duration type definition
 
 Name    |   Type  |  Description
 --------|---------|-------------
-d | Integer | The duration, in per-thousand of a day (1000 == 1 day)
-s | Integer | The duration, in seconds
+d | Integer | Duration, in per thousand of a day (1 day = 1000).
+s | Integer | Duration, in seconds
 
 

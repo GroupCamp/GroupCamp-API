@@ -8,18 +8,20 @@
 
 ## Description
 
+https://api.groupcamp.com/task/v1/milestone/[Milestone]
+
 
 Return the milestone.
 
 
 
-## Parameters in the URL
+## URL parameters
 
-In the URL, here are the expected values
+Expected values
 
 Name   | Type    | Description
 -------|---------|------------
-Milestone | Uuid | The UUID of a milestone
+Milestone | Uuid | Milestone UUID.
 
 
 
@@ -32,20 +34,20 @@ Milestone | Uuid | The UUID of a milestone
 ## Return value
 
 
-This method returns an object of type [Milestone](../types/Milestone.md).
+This method returns a [Milestone](../types/Milestone.md) object.
 
 
 
 
 
-## Possible errors
+## Errors
 
 
-HTTP Starus | Name   | Optional detail   | Description  
+HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------
-400 | bad_request | error_id | Bad Request. Please check ids in the URL path of your request.	
-403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user	
-404 | not_found |  | Requested element was not found for the current user	
+400 | bad_request | error_id | Bad Request. Please check IDs in the URL path of your request.
+403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user.
+404 | not_found |  | Requested element was not found for the current user.
 
 
 

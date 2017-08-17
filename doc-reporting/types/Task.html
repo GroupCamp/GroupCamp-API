@@ -4,7 +4,7 @@
 
 <p><a href="../index.html">Main page</a></p>
 
-<h1>The definition of type Task</h1>
+<h1>Task type definition</h1>
 
 <table>
 <tr>
@@ -64,7 +64,7 @@
 <tr>
         <td>begin</td>
         <td>Alternative(Object, Object)</td>
-        <td>The beginning date of the task</td>
+        <td>Task start date. Can be an empty object when the task has no start date, or an object with a date.</td>
 </tr>
 
 <tr>
@@ -76,13 +76,13 @@
 <tr>
         <td>begin.maybe[0].type</td>
         <td>Const( = date )</td>
-        <td>The type of the echeance</td>
+        <td>Constant. Set to 'date' when the task has a date.</td>
 </tr>
 
 <tr>
         <td>begin.maybe[0].date</td>
         <td>Date</td>
-        <td>The date of the echeance</td>
+        <td>Task date.</td>
 </tr>
 
 <tr>
@@ -94,13 +94,13 @@
 <tr>
         <td>begin.maybe[1].type</td>
         <td>Const( = empty )</td>
-        <td>The type of the echeance</td>
+        <td>Constant. Set to 'empty' when the task has no date.</td>
 </tr>
 
 <tr>
         <td>end</td>
         <td>Alternative(Object, Object, Object)</td>
-        <td>The end date of the task</td>
+        <td>Task end date. Can be an empty object when the task has no due date, an object with a date, or an object with the UUID of a milestone.</td>
 </tr>
 
 <tr>
@@ -112,13 +112,13 @@
 <tr>
         <td>end.maybe[0].type</td>
         <td>Const( = date )</td>
-        <td>The type of the echeance</td>
+        <td>Constant. Set to 'date' when the task has a date.</td>
 </tr>
 
 <tr>
         <td>end.maybe[0].date</td>
         <td>Date</td>
-        <td>The date of the echeance</td>
+        <td>Task date.</td>
 </tr>
 
 <tr>
@@ -130,19 +130,19 @@
 <tr>
         <td>end.maybe[1].type</td>
         <td>Const( = milestone )</td>
-        <td>The type of the echeance</td>
+        <td>Constant. Set to 'milestone' when the task has an end date which is the due date of a milesonte.</td>
 </tr>
 
 <tr>
         <td>end.maybe[1].date</td>
         <td>Date</td>
-        <td>The date of the echeance</td>
+        <td>The due date of the related milestone.</td>
 </tr>
 
 <tr>
         <td>end.maybe[1].id</td>
         <td>Uuid</td>
-        <td>The milestone the echeance is linked to</td>
+        <td>Milestone UUID. The milestone is linked to the TaskList where the task is.</td>
 </tr>
 
 <tr>
@@ -154,7 +154,7 @@
 <tr>
         <td>end.maybe[2].type</td>
         <td>Const( = empty )</td>
-        <td>The type of the echeance</td>
+        <td>Constant. Set to 'empty' when the task has no date.</td>
 </tr>
 
 </table>

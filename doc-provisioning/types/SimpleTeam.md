@@ -3,14 +3,14 @@
 
 [Main page](../README.md)
 
-# The definition of type SimpleTeam
+# SimpleTeam type definition
 
 Name    |   Type  |  Description
 --------|---------|-------------
-id | Uuid | UUID of the team
-name | String | The name of the team, as if should be shown on the interface
-type | Const( = team ) | Constant, must be 'team'
-state | Enum(ok) | The current state of this team, there is no trash for teams, they are deleted immediately
-is_management | Boolean | True if the team is a management team
+id | Uuid | Team UUID.
+name | String | Team name. As shown in the UI.
+type | Const( = team ) | Constant. Must be 'team'.
+state | Enum(ok) | Current team status. There is no trash for teams, teams are deleted immediately.
+is_management | Boolean | True if the team is a management team.
 
 

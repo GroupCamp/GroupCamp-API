@@ -3,12 +3,12 @@
 
 [Main page](../README.md)
 
-# The definition of type SimpleTimelogCategory
+# SimpleTimelogCategory type definition
 
 Name    |   Type  |  Description
 --------|---------|-------------
-id | Uuid | The UUID of time log category
-name | String | The name of the time log category
-type | Const( = timelogcategory ) | Data type
+id | Uuid | Time category UUID.
+name | String | Time category name.
+type | Const( = timelogcategory ) | Constant. Must me 'timelogcategory'.
 
 
