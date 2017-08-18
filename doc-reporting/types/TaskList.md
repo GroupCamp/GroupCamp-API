@@ -14,7 +14,7 @@ description | String | TaskList description.
 milestone | Alternative([Nothing](../types/Nothing.md), [Milestone](../types/Milestone.md)) | Can be an Empty object, or a Milestone, when the task list is linked with a milestone.
 milestone.maybe[0] | [Nothing](../types/Nothing.md) | Alternative
 milestone.maybe[1] | [Milestone](../types/Milestone.md) | Alternative
-is_private | Boolean | True when the task-list is private
-is_closed | Boolean | True when the task-list is completed (all tasks in the list are completed)
+is_private | Boolean | True when the task-list is private.
+is_closed | Boolean | True when the task-list is completed (all tasks in the list are completed).
 
 

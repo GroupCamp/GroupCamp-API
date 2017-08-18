@@ -7,14 +7,14 @@
 
 Name    |   Type  |  Description
 --------|---------|-------------
-id | Uuid | The UUID of the task
-name | String | The name of the task
-description | String | The description of the task
-list | [TaskList](../types/TaskList.md) | The task-list of the task
-creation_date | DateTime | The creation date of the task
-creator | [SimpleUser](../types/SimpleUser.md) | The creator of the task
-is_open | Boolean | True if the task is not finished
-affects | Array([TaskAffect](../types/TaskAffect.md)) | The list of affects
+id | Uuid | Task UUID.
+name | String | Task name.
+description | String | Task description.
+list | [TaskList](../types/TaskList.md) | A TaskList object. The task list of the task.
+creation_date | DateTime | A DateTime object. Task creation date.
+creator | [SimpleUser](../types/SimpleUser.md) | A SimpleUser object. User who created the task.
+is_open | Boolean | True for non-completed task.
+affects | Array([TaskAffect](../types/TaskAffect.md)) | An Array of TaskAffect objects. Assigned users, or Nobody.
 begin | Alternative(Object, Object) | Task start date. Can be an empty object when the task has no start date, or an object with a date.
 begin.maybe[0] | Object | Alternative
 begin.maybe[0].type | Const( = date ) | Constant. Set to 'date' when the task has a date.

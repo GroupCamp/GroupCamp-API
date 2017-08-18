@@ -1,13 +1,13 @@
-# Index of GroupCamp API public documentation accessible via interface __'reporting'__
+# GroupCamp 'reporting' REST API Documentation
 
-## Available modules:
+## Modules:
 
 * [task, version v1](./task_v1/README.md)
 * [track, version v1](./track_v1/README.md)
 
 
 
-## List of known types
+## Data types
 
 * [Duration](types/Duration.md)
 * [Milestone](types/Milestone.md)

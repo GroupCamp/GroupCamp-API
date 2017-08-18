@@ -21,7 +21,7 @@ Return all the users of the account, filtered according to the GET arguments rec
 
 Optional or required values.
 
-Name    |  Mandatory    |   Type   |  Description 
+Name    |  Mandatory    |   Type   |  Description
 --------|---------------|----------|---------------
 state | Optional | String | Filter selected users on their state.
 user_type | Optional | String | Filter selected users on the user type.

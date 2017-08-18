@@ -38,13 +38,12 @@ This method returns a JSON structure. An array, all elements are of type Object
 
 Name   |  Type   |  Description
 -------|---------|-------------
-id | Uuid | UUID of the team
-name | String | The name of the team, as if should be shown on the interface
-type | Const( = team ) | Constant, must be 'team'
-state | Enum(ok) | The current state of this team, there is no trash for teams, they are deleted immediately
-picture | [Picture](../types/Picture.md) | The team's picture
-description | String | The team's description
-is_tech | Boolean | Is a Management team
+id | Uuid | Team UUID.
+name | String | Team name.
+type | Const( = team ) | Constant, must be 'team'.
+state | Enum(ok) | Team status. There is no trash for teams, they are deleted immediately.
+description | String | Team description.
+is_tech | Boolean | True when the team is a Management team.
 
 
 

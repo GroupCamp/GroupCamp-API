@@ -21,7 +21,7 @@ Returns informations about the groups matching the search criteria provided in t
 
 Optional or required values.
 
-Name    |  Mandatory    |   Type   |  Description 
+Name    |  Mandatory    |   Type   |  Description
 --------|---------------|----------|---------------
 gtype | Optional | Enum(project, intranet, extranet) | The type of group
 name | Optional | String | Any group having exactly this name will be returned

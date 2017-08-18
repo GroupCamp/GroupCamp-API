@@ -1,14 +1,13 @@
-# Index of GroupCamp API public documentation accessible via interface __'provisioning'__
+# GroupCamp 'provisioning' REST API Documentation
 
-## Available modules:
+## Modules:
 
 * [core, version v1](./core_v1/README.md)
 
 
 
-## List of known types
+## Data types
 
-* [Picture](types/Picture.md)
 * [SimpleGcat](types/SimpleGcat.md)
 * [SimpleGroup](types/SimpleGroup.md)
 * [SimpleOrga](types/SimpleOrga.md)
