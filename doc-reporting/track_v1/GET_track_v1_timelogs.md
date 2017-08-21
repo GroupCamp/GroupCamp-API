@@ -73,7 +73,7 @@ HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------
 400 | bad_request | error_body_data | Bad Request. Please check the request body.
 400 | bad_request | get_parameter_error | At least one of the GET parameters is wrong or missing.
-403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user.
+403 | forbidden | access_forbidden | Requested item cannot be retrieved by the current user.
 410 | gone | gone | This temporary item has gone away. You should start again to re-create the temporary item.
 
 

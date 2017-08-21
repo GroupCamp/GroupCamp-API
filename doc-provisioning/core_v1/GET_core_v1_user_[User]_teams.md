@@ -11,7 +11,7 @@
 https://api.groupcamp.com/core/v1/user/[User]/teams
 
 
-Returns the list of all teams having this user as a member
+Get a list of teams which have a user as a member.
 
 
 
@@ -21,7 +21,7 @@ Expected values
 
 Name   | Type    | Description
 -------|---------|------------
-User | Uuid | The UUID of a user
+User | Uuid | User UUID, or User e-mail address.
 
 
 
@@ -41,9 +41,9 @@ Name   |  Type   |  Description
 id | Uuid | Team UUID.
 name | String | Team name.
 type | Const( = team ) | Constant, must be 'team'.
-state | Enum(ok) | Team status. There is no trash for teams, they are deleted immediately.
+state | Enum(ok) | Current team status. Value is 'ok'.
 description | String | Team description.
-is_tech | Boolean | True when the team is a Management team.
+is_tech | Boolean | True when the team is a management team.
 
 
 
@@ -56,8 +56,8 @@ is_tech | Boolean | True when the team is a Management team.
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------
 400 | bad_request | error_id | Bad Request. Please check IDs in the URL path of your request.
-403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user.
-404 | not_found |  | Requested element was not found for the current user.
+403 | forbidden | access_forbidden | Requested item cannot be retrieved by the current user.
+404 | not_found |  | Requested item was not found for the current user.
 
 
 

@@ -21,7 +21,7 @@ Expected values
 
 Name   | Type    | Description
 -------|---------|------------
-Group | Uuid | The UUID of a group
+Group | Uuid | Group UUID.
 
 
 
@@ -39,25 +39,25 @@ This method returns a JSON structure. An anonymous generic object
 Name   |  Type   |  Description
 -------|---------|-------------
 id | Uuid | Group UUID.
-name | String | The name of the group. Can contain the Project Code, if appropriate.
-group_name | String | The raw group name. Without any Project Code
-type | Const( = group ) | The type of the object
-gtype | Enum(project, intranet, extranet) | The group's type
-state | Enum(archi, ok, del, trash) | The current state of this group
-description | String | The group's description
-orga | [SimpleOrga](../types/SimpleOrga.md) | The organization to display, linked to this group
-leader1 | [SimpleUser](../types/SimpleUser.md) | The project manager
-leader2 | [SimpleUser](../types/SimpleUser.md) | The project manager's assistant
-managing_team | [SimpleTeam](../types/SimpleTeam.md) | The management team of the project
-category | [SimpleGcat](../types/SimpleGcat.md) | The category of the group
-access | Enum(open, invited) | Group access status
-users | Array([SimpleUser](../types/SimpleUser.md)) | Minimal set of informations for each user who is a member of the group
-description_color | Enum(default, green, orange, red) | The color to use for the description background
-can_accept_guest | Boolean | If the group can accept guest members
-nb_users | Integer | The number of users inside that group
-dates | Object | The dates that group
-dates.start | Date | When the project start
-dates.end | Date | When the project end
+name | String | Group name. Can contain the Project Code, if applicable.
+group_name | String | Raw group name, without Project Code.
+type | Const( = group ) | Constant. Sert to 'group'.
+gtype | Enum(project, intranet, extranet) | Type of group.
+state | Enum(archi, ok, del, trash) | Current group status.
+description | String | Group description.
+orga | [SimpleOrga](../types/SimpleOrga.md) | Client company associated to the group.
+leader1 | [SimpleUser](../types/SimpleUser.md) | Project manager 1 of the group.
+leader2 | [SimpleUser](../types/SimpleUser.md) | Project manager 2 (assistant) of the group.
+managing_team | [SimpleTeam](../types/SimpleTeam.md) | Management team of the project.
+category | [SimpleGcat](../types/SimpleGcat.md) | Group category.
+access | Enum(open, invited) | Group access status.
+users | Array([SimpleUser](../types/SimpleUser.md)) | An Array of SimpleUser objects. List of group members.
+description_color | Enum(default, green, orange, red) | The color to use for the description background.
+can_accept_guest | Boolean | True when the group can have guest members.
+nb_users | Integer | Number of group members.
+dates | Object | Project dates.
+dates.start | Date | Project start date
+dates.end | Date | Project end date
 
 
 
@@ -70,8 +70,8 @@ dates.end | Date | When the project end
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------
 400 | bad_request | error_id | Bad Request. Please check IDs in the URL path of your request.
-403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user.
-404 | not_found |  | Requested element was not found for the current user.
+403 | forbidden | access_forbidden | Requested item cannot be retrieved by the current user.
+404 | not_found |  | Requested item was not found for the current user.
 
 
 

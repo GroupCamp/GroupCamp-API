@@ -21,8 +21,8 @@ Expected values
 
 Name   | Type    | Description
 -------|---------|------------
-Group | Uuid | The UUID of a group
-User | Uuid | The UUID of a user
+Group | Uuid | Group UUID.
+User | Uuid | User UUID, or User e-mail address.
 
 
 
@@ -39,7 +39,7 @@ This method returns a JSON structure. An anonymous generic object
 
 Name   |  Type   |  Description
 -------|---------|-------------
-value | Const( = ok ) | The response if everything went well
+value | Const( = ok ) | Constant. Value is 'ok'. Is returned when the requested action(s) has been performed successfully.
 
 
 
@@ -52,8 +52,8 @@ value | Const( = ok ) | The response if everything went well
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------
 400 | bad_request | error_id | Bad Request. Please check IDs in the URL path of your request.
-403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user.
-404 | not_found |  | Requested element was not found for the current user.
+403 | forbidden | access_forbidden | Requested item cannot be retrieved by the current user.
+404 | not_found |  | Requested item was not found for the current user.
 
 
 

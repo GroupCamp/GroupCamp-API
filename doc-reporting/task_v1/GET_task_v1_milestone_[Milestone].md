@@ -46,8 +46,8 @@ This method returns a [Milestone](../types/Milestone.md) object.
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------
 400 | bad_request | error_id | Bad Request. Please check IDs in the URL path of your request.
-403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user.
-404 | not_found |  | Requested element was not found for the current user.
+403 | forbidden | access_forbidden | Requested item cannot be retrieved by the current user.
+404 | not_found |  | Requested item was not found for the current user.
 
 
 

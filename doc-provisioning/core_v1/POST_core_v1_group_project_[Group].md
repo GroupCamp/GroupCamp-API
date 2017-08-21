@@ -11,7 +11,7 @@
 https://api.groupcamp.com/core/v1/group/project/[Group]
 
 
-Modifies a group of type 'project'.
+Update project group.
 
 
 
@@ -22,21 +22,21 @@ Modifies a group of type 'project'.
 ## Request body
 
 
-This method requires a JSON object to be transmited in the body of the request.
+This method requires a JSON object in the body of the request.
 
 Name   |  Mandatory  |  Type   |   Description
 -------|-------------|---------|--------------
-name | Optional | String | The name of the group to be created. Must be unique accross the groups in the same GroupCamp account.
-external_ref | Optional | String | The external reference. Must be unique.
-project_code | Optional | String | The project code. Must be unique. Set to an empty value to remove the existing code from a project.
-description | Optional | String | The description of the group, can be left empty.
-category_name | Optional | String | The name of the category for this project. Category MUST exist. Name is case-sentitive.
-leader1 | Optional | Uuid | The UUID of the project-manager
-leader2 | Optional | Uuid | The UUID of the deputy project-manager
-managers | Optional | Array(Uuid) | The UUIDs of other additional project managers
-management_team | Optional | Uuid | The UUID of the managing team if there is one for that project. The value 'none' instead of an UUID will remove the managing_team from an existing project.
-access | Optional | Enum(invite, open) | Access control rule used for that group
-with_guests | Optional | Boolean | Can users of type 'guest' be member of this group
+name | Mandatory | String | Group name. Must be unique in the GroupCamp account.
+external_ref | Optional | String | External unique reference. This is your app reference.
+project_code | Optional | String | Project code. Must be unique. Set to an empty value to remove an existing Project code.
+description | Optional | String | Group description.
+category_name | Optional | String | Project group category. You must select an existing group category from your GroupCamp account. Group category is case-sensitive. A setting located in the GroupCamp Admin panel decides is the field is mandatory or not.
+leader1 | Optional | Uuid | Project manager 1 UUID.
+leader2 | Optional | Uuid | Project manager 2 UUID (assistant).
+managers | Optional | Array(Uuid) | UUIDs of other additional project managers (must be employees, cannot be guests).
+management_team | Optional | Uuid | UUID of the managing team if there is one for that project. Members of the team who are also members of the project will have the 'group manager' privilege. Use the value 'none' instead of an UUID to remove a management team from the project.
+access | Optional | Enum(invite, open) | Group access. Open to all colleagues or By invitation only.
+with_guests | Optional | Boolean | True when the group can have guest members.
 
 
 
@@ -49,15 +49,15 @@ This method returns a JSON structure. An anonymous generic object
 
 Name   |  Type   |  Description
 -------|---------|-------------
-id | Uuid | The UUID of the group
-name | String | The name of the group
-type | Const( = group ) | The type of the object
-gtype | Enum(project, intranet, extranet) | The group's type
-state | Enum(archi, ok, del, trash) | The current state of this group
-description | String | The group's description
-starred | Integer | If the group is starred for current user, the order of it
-can_accept_guest | Boolean | If the group can accept guest members
-nb_users | Integer | The number of users inside that group
+id | Uuid | Group UUID.
+name | String | Group name.
+type | Const( = group ) | Constant. Must be 'group'.
+gtype | Enum(project, intranet, extranet) | Type of group.
+state | Enum(archi, ok, del, trash) | Current group status.
+description | String | Group description.
+starred | Integer | When the group is starred for current user, returns the index order of the group in the list of starred groups for current user.
+can_accept_guest | Boolean | True when the group can have guest members.
+nb_users | Integer | Number of group members.
 
 
 
@@ -72,7 +72,7 @@ HTTP Status | Name   | Optional          | Description
 400 | bad_request | error_body_data | Bad Request. Please check the request body.
 400 | bad_request | error_id | Bad Request. Please check IDs in the URL path of your request.
 400 | bad_request | error_json | Bad Request. Please check that the body of your request is a valid json object.
-403 | forbidden | access_forbidden | The requested item cannot be accessed by the current user.
+403 | forbidden | access_forbidden | Requested item cannot be retrieved by the current user.
 
 
 

@@ -11,7 +11,7 @@
 https://api.groupcamp.com/core/v1/groups
 
 
-Returns informations about the groups matching the search criteria provided in the GET arguments. Incompatible search criterias will return an empty list without a warning.
+Get groups matching search criterias. When criterias are incompatible, the search will return an empty list without warnings.
 
 
 
@@ -23,13 +23,13 @@ Optional or required values.
 
 Name    |  Mandatory    |   Type   |  Description
 --------|---------------|----------|---------------
-gtype | Optional | Enum(project, intranet, extranet) | The type of group
-name | Optional | String | Any group having exactly this name will be returned
-search | Optional | String | Any group which have this text in its name will be returned
-user | Optional | Uuid | Only groups which have this user among its members will be returned
-category_name | Optional | String | Only group in a category having exactly this name will be returned
-project_type | Optional | Enum(internal, customer) | Only project will be returned, and only if their project_type is matching
-state | Optional | Enum(all, ok, archi, del, trash) | Only groups in the given state will be returned. If this filter is not provided, only groups in the state 'ok' are returned, thus to get all the groups, a filter set on 'all' is required
+gtype | Optional | Enum(project, intranet, extranet) | Type of group.
+name | Optional | String | Any group having exactly this name will be returned.
+search | Optional | String | Groups where the string matches the group name will be returned.
+user | Optional | Uuid | Groups were the user is a member will be returned.
+category_name | Optional | String | Groups in that group category will be returned. Category name is case sensitive.
+project_type | Optional | Enum(internal, customer) | Only project groups will be returned, and only if their project_type is matching.
+state | Optional | Enum(all, ok, archi, del, trash) | When the filter is not set, only group with the 'ok' status will be returned. When the filter is set, only groups with the given status will be returned.
 
 
 
