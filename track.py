@@ -27,9 +27,9 @@ def do_call (method, path, body, q_string='') :
 	sig = signature.digest().encode("base64").rstrip('\n')
 
 	# X-Gcmp-Application MUST be 'reporting-1'
-	# X-Gcmp-Acting MUST be set to the user which will be loged as performing the action.
-	#   You can create a "fake" user in your GroupCamp account for this purpose. Her
-	#   privileges are not checked - this user is *only* loged as the user who did
+	# X-Gcmp-Acting MUST be set to the user which will be logged as performing the action.
+	#   You can create a "fake" user in your GroupCamp account for this purpose. User
+	#   privileges are not checked - this user is *only* logged as the user who did
 	#   perform the action.
 	# Authorization is the string "GCMP <key>:<signature>", the secret MUST NEVER BE SENT.
 	#   It should be kept secret.

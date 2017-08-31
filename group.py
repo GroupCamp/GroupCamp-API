@@ -24,17 +24,17 @@ def do_call (method, path, body, q_string='') :
 	signature = hmac.new(secret, text, sha1)
 	sig = signature.digest().encode("base64").rstrip('\n')
 
-	# X-Gcmp-Application MUST be 'provisionning-1'
-	# X-Gcmp-Acting MUST be set to the user which will be loged as performing the action.
-	#   You can create a "fake" user in your GroupCamp account for this purpose. Her
-	#   privileges are not checked - this user is *only* loged as the user who did
+	# X-Gcmp-Application MUST be 'provisioning-1'
+	# X-Gcmp-Acting MUST be set to the user which will be logged as performing the action.
+	#   You can create a "fake" user in your GroupCamp account for this purpose. User
+	#   privileges are not checked - this user is *only* logged as the user who did
 	#   perform the action.
 	# Authorization is the string "GCMP <key>:<signature>", the secret MUST NEVER BE SENT.
 	#   It should be kept secret.
 	# Content-Type is application/json, since the body is a json object.
 
 	headers = {
-		'X-Gcmp-Application': 'provisionning-1',
+		'X-Gcmp-Application': 'provisioning-1',
 		'X-Gcmp-Acting': acting,
 		'Authorization': 'GCMP '+key+':'+sig,
 		'Content-Type': 'application/json'
@@ -170,7 +170,7 @@ def user_teams(email) :
 team_uuid = 'Get it from the GroupCamp user interface'
 gcat_name = 'Main category'
 user_email = 'jean@localhost'
-group_id = new_project('The new group 3', 'This group have been created via the provisionning API', 'invite', False, gcat_name, team_uuid)
+group_id = new_project('The new group 3', 'This group have been created via the provisioning API', 'invite', False, gcat_name, team_uuid)
 if group_id != 'failed' :
 	insert_user(group_id, user_email)
 	change_project(group_id, 'Another name', 'The description is modified', 'open', True)
