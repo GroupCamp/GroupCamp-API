@@ -34,7 +34,12 @@ TaskList | Uuid | TaskList UUID.
 ## Return value
 
 
-This method returns a [TaskList](../types/TaskList.md) object.
+
+
+
+  
+  This method returns a [TaskList](../types/TaskList.md) object.
+  
 
 
 
@@ -42,6 +47,11 @@ This method returns a [TaskList](../types/TaskList.md) object.
 
 ## Errors
 
+Generic errors may be sent by every method:
+* `unauthorized`, see documentation about [authentication](../../Auth.md)
+
+
+Specific errors this method may return:
 
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------

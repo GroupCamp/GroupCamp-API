@@ -54,7 +54,11 @@ template.files.others | Optional | Boolean | Set to true to link the files not o
 ## Return value
 
 
-This method returns a JSON structure. An anonymous generic object
+
+
+
+  
+  This method returns a JSON structure. An anonymous generic object
 
 Name   |  Type   |  Description
 -------|---------|-------------
@@ -68,6 +72,7 @@ starred | Integer | When the group is starred for current user, returns the inde
 can_accept_guest | Boolean | True when the group can have guest members.
 nb_users | Integer | Number of group members.
 
+  
 
 
 
@@ -75,6 +80,11 @@ nb_users | Integer | Number of group members.
 
 ## Errors
 
+Generic errors may be sent by every method:
+* `unauthorized`, see documentation about [authentication](../../Auth.md)
+
+
+Specific errors this method may return:
 
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------

@@ -12,5 +12,6 @@ user.maybe[0] | [Nobody](../types/Nobody.md) | Alternative
 user.maybe[1] | [SimpleUser](../types/SimpleUser.md) | Alternative
 progress | Integer | Completion of the task for that assigned user (%).
 estimate | [Duration](../types/Duration.md) | A Duration object. Estimated time for the assigned user.
+track_time | [Duration](../types/Duration.md) | Total of time spent records for this user on that task.
 
 

@@ -34,7 +34,11 @@ User | Uuid | User UUID, or User e-mail address.
 ## Return value
 
 
-This method returns a JSON structure. An array, all elements are of type Object 
+
+
+
+  
+  This method returns a JSON structure. An array, all elements are of type Object 
 
 Name   |  Type   |  Description
 -------|---------|-------------
@@ -45,6 +49,7 @@ state | Enum(ok) | Current team status. Value is 'ok'.
 description | String | Team description.
 is_tech | Boolean | True when the team is a management team.
 
+  
 
 
 
@@ -52,6 +57,11 @@ is_tech | Boolean | True when the team is a management team.
 
 ## Errors
 
+Generic errors may be sent by every method:
+* `unauthorized`, see documentation about [authentication](../../Auth.md)
+
+
+Specific errors this method may return:
 
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------

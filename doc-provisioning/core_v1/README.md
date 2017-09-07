@@ -3,7 +3,7 @@
 
 # Documentation for module core, version v1
 
-HTTP Method | Methode name
+HTTP Method | Method name
 ------------|--------------
 GET | [core/v1/group/[Group]](GET_core_v1_group_[Group].md)
 PUT | [core/v1/group/[Group]/user/[User]](PUT_core_v1_group_[Group]_user_[User].md)

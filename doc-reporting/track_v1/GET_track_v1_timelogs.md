@@ -21,10 +21,15 @@ Returns all the time spent records matching the search criterions.
 
 Optional or required values.
 
-Name    |  Mandatory    |   Type   |  Description
---------|---------------|----------|---------------
-start | Mandatory | Date | Return time spent records after this date.
-end | Mandatory | Date | Return time spent records before this date. The maximum date range allowed from start to end is 42 days (6 weeks).
+Name    |  Mandatory    |   Multiple[1]    |   Type   |  Description
+--------|---------------|------------------|----------|---------------
+start | Mandatory | No | Date | Return time spent records after this date.
+end | Mandatory | No | Date | Return time spent records before this date. The maximum date range allowed from start to end is 42 days (6 weeks).
+
+
+[1] Can the GET parameter be provided several times. If yes, the
+parameter can be provided several times, each value being used. If
+no, a request with several values will be rejected.
 
 
 
@@ -34,7 +39,17 @@ end | Mandatory | Date | Return time spent records before this date. The maximum
 ## Return value
 
 
-This method returns a JSON structure. An array, all elements are of type [Timelog](../types/Timelog.md) 
+
+The results are paginated. See documentation on the [pagin mechanism](../../Paging.md) for
+more informations.
+
+Mechanism used: `full`
+
+
+
+
+  
+  This method returns a JSON structure. An array, all elements are of type [Timelog](../types/Timelog.md) 
 
 Name   |  Type   |  Description
 -------|---------|-------------
@@ -61,6 +76,7 @@ object.maybe[1].id | Uuid | Task UUID.
 object.maybe[1].type | Const( = task ) | Constant. Object type. Set to 'task'.
 object.maybe[1].appli | Const( = task ) | Constant. Application name. Set to 'task'.
 
+  
 
 
 
@@ -68,6 +84,12 @@ object.maybe[1].appli | Const( = task ) | Constant. Application name. Set to 'ta
 
 ## Errors
 
+Generic errors may be sent by every method:
+* `unauthorized`, see documentation about [authentication](../../Auth.md)
+* `Gone`, see documentation about [paging mechanism](../../Paging.md)
+
+
+Specific errors this method may return:
 
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------

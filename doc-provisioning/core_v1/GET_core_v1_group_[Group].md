@@ -34,7 +34,11 @@ Group | Uuid | Group UUID.
 ## Return value
 
 
-This method returns a JSON structure. An anonymous generic object
+
+
+
+  
+  This method returns a JSON structure. An anonymous generic object
 
 Name   |  Type   |  Description
 -------|---------|-------------
@@ -59,6 +63,7 @@ dates | Object | Project dates.
 dates.start | Date | Project start date
 dates.end | Date | Project end date
 
+  
 
 
 
@@ -66,6 +71,11 @@ dates.end | Date | Project end date
 
 ## Errors
 
+Generic errors may be sent by every method:
+* `unauthorized`, see documentation about [authentication](../../Auth.md)
+
+
+Specific errors this method may return:
 
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------

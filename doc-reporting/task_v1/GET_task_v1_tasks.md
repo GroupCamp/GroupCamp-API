@@ -1,12 +1,59 @@
 
-[The known types](./README.md)
+[Module](./README.md)
 
 [Main page](../README.md)
 
-# Task type definition
 
-Name    |   Type  |  Description
---------|---------|-------------
+# GET on task/v1/tasks
+
+## Description
+
+https://api.groupcamp.com/task/v1/tasks
+
+
+Return tasks matching the filters.
+
+
+
+
+
+## GET parameters
+
+Optional or required values.
+
+Name    |  Mandatory    |   Multiple[1]    |   Type   |  Description
+--------|---------------|------------------|----------|---------------
+group | Optional | Yes | Uuid | Only tasks owned by and of those groups will be returned.
+list | Optional | No | Uuid | Task list where to search tasks. If the 'group' parameter is provided in an inconstent way (without the group owner of the task list), an empty result will be returned without a warning. It is safer to omit the 'group' parameter.
+to | Optional | Yes | Uuid | Tasks assigned to any of those users are returned.
+
+
+[1] Can the GET parameter be provided several times. If yes, the
+parameter can be provided several times, each value being used. If
+no, a request with several values will be rejected.
+
+
+
+
+
+
+## Return value
+
+
+
+The results are paginated. See documentation on the [pagin mechanism](../../Paging.md) for
+more informations.
+
+Mechanism used: `next`
+
+
+
+
+  
+  This method returns a JSON structure. An array, all elements are of type [Task](../types/Task.md) 
+
+Name   |  Type   |  Description
+-------|---------|-------------
 id | Uuid | Task UUID.
 name | String | Task name.
 description | String | Task description.
@@ -35,5 +82,27 @@ end.maybe[1].date | Date | The due date of the related milestone.
 end.maybe[1].id | Uuid | Milestone UUID. The milestone is linked to the TaskList where the task is.
 end.maybe[2] | Object | Alternative
 end.maybe[2].type | Const( = empty ) | Constant. Set to 'empty' when the task has no date.
+
+  
+
+
+
+
+
+## Errors
+
+Generic errors may be sent by every method:
+* `unauthorized`, see documentation about [authentication](../../Auth.md)
+* `Gone`, see documentation about [paging mechanism](../../Paging.md)
+
+
+Specific errors this method may return:
+
+HTTP Status | Name   | Optional          | Description
+------------|--------|-------------------|------------
+400 | bad_request | get_parameter_error | At least one of the GET parameters is wrong or missing.
+403 | forbidden | access_forbidden | Requested item cannot be retrieved by the current user.
+404 | not_found |  | Requested item was not found for the current user.
+
 
 

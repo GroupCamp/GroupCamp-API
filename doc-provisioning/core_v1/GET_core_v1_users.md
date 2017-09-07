@@ -21,11 +21,16 @@ Return all the users of the account, filtered according to the GET arguments rec
 
 Optional or required values.
 
-Name    |  Mandatory    |   Type   |  Description
---------|---------------|----------|---------------
-state | Optional | String | Filter selected users on their state.
-user_type | Optional | String | Filter selected users on the user type.
-is_leader | Optional | [FilterGroupType](../search/FilterGroupType.md) | Only returns users who are leaders of that type of group
+Name    |  Mandatory    |   Multiple[1]    |   Type   |  Description
+--------|---------------|------------------|----------|---------------
+state | Optional | No | String | Filter selected users on their state.
+user_type | Optional | No | String | Filter selected users on the user type.
+is_leader | Optional | No | [FilterGroupType](../search/FilterGroupType.md) | Only returns users who are leaders of that type of group
+
+
+[1] Can the GET parameter be provided several times. If yes, the
+parameter can be provided several times, each value being used. If
+no, a request with several values will be rejected.
 
 
 
@@ -35,12 +40,17 @@ is_leader | Optional | [FilterGroupType](../search/FilterGroupType.md) | Only re
 ## Return value
 
 
-This method returns a JSON structure. An array, all elements are of type [SimpleUser](../types/SimpleUser.md) 
+
+
+
+  
+  This method returns a JSON structure. An array, all elements are of type [SimpleUser](../types/SimpleUser.md) 
 
 Name   |  Type   |  Description
 -------|---------|-------------
  | [SimpleUser](../types/SimpleUser.md) | Each element of the Array
 
+  
 
 
 
@@ -48,6 +58,11 @@ Name   |  Type   |  Description
 
 ## Errors
 
+Generic errors may be sent by every method:
+* `unauthorized`, see documentation about [authentication](../../Auth.md)
+
+
+Specific errors this method may return:
 
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------

@@ -34,7 +34,12 @@ Milestone | Uuid | Milestone UUID.
 ## Return value
 
 
-This method returns a [Milestone](../types/Milestone.md) object.
+
+
+
+  
+  This method returns a [Milestone](../types/Milestone.md) object.
+  
 
 
 
@@ -42,6 +47,11 @@ This method returns a [Milestone](../types/Milestone.md) object.
 
 ## Errors
 
+Generic errors may be sent by every method:
+* `unauthorized`, see documentation about [authentication](../../Auth.md)
+
+
+Specific errors this method may return:
 
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------
