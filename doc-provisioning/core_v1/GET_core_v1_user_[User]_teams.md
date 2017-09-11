@@ -38,7 +38,7 @@ User | Uuid | User UUID, or User e-mail address.
 
 
   
-  This method returns a JSON structure. An array, all elements are of type Object 
+  This method returns a JSON structure. An array, all items are of type Object 
 
 Name   |  Type   |  Description
 -------|---------|-------------
@@ -61,7 +61,7 @@ Generic errors may be sent by every method:
 * `unauthorized`, see documentation about [authentication](../../Auth.md)
 
 
-Specific errors this method may return:
+This method can return specific errors:
 
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------

@@ -46,7 +46,7 @@ id | Uuid | Group UUID.
 name | String | Group name. Can contain the Project Code, if applicable.
 group_name | String | Raw group name, without Project Code.
 type | Const( = group ) | Constant. Sert to 'group'.
-gtype | Enum(project, intranet, extranet) | Type of group.
+gtype | Enum(project, intranet, extranet) | Group type.
 state | Enum(archi, ok, del, trash) | Current group status.
 description | String | Group description.
 orga | [SimpleOrga](../types/SimpleOrga.md) | Client company associated to the group.
@@ -75,7 +75,7 @@ Generic errors may be sent by every method:
 * `unauthorized`, see documentation about [authentication](../../Auth.md)
 
 
-Specific errors this method may return:
+This method can return specific errors:
 
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------

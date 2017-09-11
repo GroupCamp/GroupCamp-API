@@ -3,6 +3,9 @@
 You'll find here some pieces of code showing how to use the
 GroupCamp public provisioning and reporting REST APIs.
 
+To enable APIs accesses in your GroupCamp account, please consult
+this page: https://www.groupcamp.com/h/introduction-groupcamp-api
+
 ## Manifest:
 
 * group.py shows, based on standard Python libraries, how to create
@@ -18,6 +21,7 @@ GroupCamp public provisioning and reporting REST APIs.
 * The [Provisioning](doc-provisioning/README.md) API allows to create items
   in your GroupCamp account (create projects, add users in projects, etc)
 * The [Reporting](doc-reporting/README.md) is the API to get some reports from
-  your GroupCamp account (get timelogs and related informations)
+  your GroupCamp account (get tasks, task lists, milestones, spent time records,
+  and related informations)
 
 

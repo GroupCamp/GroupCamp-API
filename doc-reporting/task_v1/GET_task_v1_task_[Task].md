@@ -51,7 +51,7 @@ Generic errors may be sent by every method:
 * `unauthorized`, see documentation about [authentication](../../Auth.md)
 
 
-Specific errors this method may return:
+This method can return specific errors:
 
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------

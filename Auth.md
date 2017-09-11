@@ -12,7 +12,7 @@ when any action needs to be logged or traced in the history in your
 account. For example, when a group is created, this user will be
 recorded in the main history as the user who created the group. This
 user is **not** used for any credential control. There is no need for
-this user to be an administrator of the account, or to be membe of
+this user to be an administrator of the account, or to be member of
 any group. We suggest using a dedicated user, with an explicit name,
 so having a user whose name is "Our API program" with an e-mail
 "api@mycompany.com", and the HTTP header:
@@ -39,7 +39,7 @@ status 401.
 
 Here are the usual problems:
 
-* API is not enabled on your account: if you cannot access the API
+* API is not enabled in your account: if you cannot access the API
   icon in the admin panel of your account, then, the authentication
   will consider the key/secret pair is invalid, please contact the
   GroupCamp support to re-enable the API access on your account.
@@ -53,7 +53,7 @@ Here are the usual problems:
   make a signature on your request, and compare with the signature
   produced by your own code.
 * The API used is not the right one: if a method is available in the
-  API `reporting` it cannot be called in the API `provisioning`. If
+  `reporting` API it cannot be called in the `provisioning` API. If
   the `X-Gcmp-Application` and the key are coherent, but the method
   is not available, the final phase of the authentication will fail.
 

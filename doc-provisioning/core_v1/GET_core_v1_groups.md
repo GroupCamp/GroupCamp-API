@@ -32,9 +32,9 @@ project_type | Optional | No | Enum(internal, customer) | Only project groups wi
 state | Optional | Yes | Enum(all, ok, archi, del, trash) | When the filter is not set, only group with the 'ok' status will be returned. When the filter is set, only groups with the given status will be returned.
 
 
-[1] Can the GET parameter be provided several times. If yes, the
+[1] Can the GET parameter be provided several times. If Yes, the
 parameter can be provided several times, each value being used. If
-no, a request with several values will be rejected.
+No, a request with several values will be rejected.
 
 
 
@@ -48,11 +48,11 @@ no, a request with several values will be rejected.
 
 
   
-  This method returns a JSON structure. An array, all elements are of type [SimpleGroup](../types/SimpleGroup.md) 
+  This method returns a JSON structure. An array, all items are of type [SimpleGroup](../types/SimpleGroup.md) 
 
 Name   |  Type   |  Description
 -------|---------|-------------
- | [SimpleGroup](../types/SimpleGroup.md) | Each element of the Array
+ | [SimpleGroup](../types/SimpleGroup.md) | Each item of the Array
 
   
 
@@ -66,7 +66,7 @@ Generic errors may be sent by every method:
 * `unauthorized`, see documentation about [authentication](../../Auth.md)
 
 
-Specific errors this method may return:
+This method can return specific errors:
 
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------

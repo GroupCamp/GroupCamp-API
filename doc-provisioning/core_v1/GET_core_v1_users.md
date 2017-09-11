@@ -25,12 +25,12 @@ Name    |  Mandatory    |   Multiple[1]    |   Type   |  Description
 --------|---------------|------------------|----------|---------------
 state | Optional | No | String | Filter selected users on their state.
 user_type | Optional | No | String | Filter selected users on the user type.
-is_leader | Optional | No | [FilterGroupType](../search/FilterGroupType.md) | Only returns users who are leaders of that type of group
+is_leader | Optional | No | [FilterGroupType](../search/FilterGroupType.md) | Only returns users who are leaders of that type of group.
 
 
-[1] Can the GET parameter be provided several times. If yes, the
+[1] Can the GET parameter be provided several times. If Yes, the
 parameter can be provided several times, each value being used. If
-no, a request with several values will be rejected.
+No, a request with several values will be rejected.
 
 
 
@@ -44,11 +44,11 @@ no, a request with several values will be rejected.
 
 
   
-  This method returns a JSON structure. An array, all elements are of type [SimpleUser](../types/SimpleUser.md) 
+  This method returns a JSON structure. An array, all items are of type [SimpleUser](../types/SimpleUser.md) 
 
 Name   |  Type   |  Description
 -------|---------|-------------
- | [SimpleUser](../types/SimpleUser.md) | Each element of the Array
+ | [SimpleUser](../types/SimpleUser.md) | Each item of the Array
 
   
 
@@ -62,7 +62,7 @@ Generic errors may be sent by every method:
 * `unauthorized`, see documentation about [authentication](../../Auth.md)
 
 
-Specific errors this method may return:
+This method can return specific errors:
 
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------

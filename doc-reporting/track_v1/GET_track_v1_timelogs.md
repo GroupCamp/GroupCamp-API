@@ -23,13 +23,13 @@ Optional or required values.
 
 Name    |  Mandatory    |   Multiple[1]    |   Type   |  Description
 --------|---------------|------------------|----------|---------------
-start | Mandatory | No | Date | Return time spent records after this date.
-end | Mandatory | No | Date | Return time spent records before this date. The maximum date range allowed from start to end is 42 days (6 weeks).
+start | Mandatory | No | Date | Returns time spent records after this date.
+end | Mandatory | No | Date | Returns time spent records before this date. The maximum date range allowed from start to end is 42 days (6 weeks).
 
 
-[1] Can the GET parameter be provided several times. If yes, the
+[1] Can the GET parameter be provided several times. If Yes, the
 parameter can be provided several times, each value being used. If
-no, a request with several values will be rejected.
+No, a request with several values will be rejected.
 
 
 
@@ -40,7 +40,7 @@ no, a request with several values will be rejected.
 
 
 
-The results are paginated. See documentation on the [pagin mechanism](../../Paging.md) for
+Results are paginated. See documentation on the [paging mechanism](../../Paging.md) for
 more informations.
 
 Mechanism used: `full`
@@ -49,7 +49,7 @@ Mechanism used: `full`
 
 
   
-  This method returns a JSON structure. An array, all elements are of type [Timelog](../types/Timelog.md) 
+  This method returns a JSON structure. An array, all items are of type [Timelog](../types/Timelog.md) 
 
 Name   |  Type   |  Description
 -------|---------|-------------
@@ -89,7 +89,7 @@ Generic errors may be sent by every method:
 * `Gone`, see documentation about [paging mechanism](../../Paging.md)
 
 
-Specific errors this method may return:
+This method can return specific errors:
 
 HTTP Status | Name   | Optional          | Description
 ------------|--------|-------------------|------------
