@@ -60,6 +60,7 @@ description | String | Task description.
 list | [TaskList](../types/TaskList.md) | A TaskList object. The task list of the task.
 creation_date | DateTime | A DateTime object. Task creation date.
 creator | [SimpleUser](../types/SimpleUser.md) | A SimpleUser object. User who created the task.
+modification_date | DateTime | A DateTime object. Task modification date. 
 completion_date | DateTime | A DateTime object. Task completion date.
 completed_by | [SimpleUser](../types/SimpleUser.md) | A SimpleUser object. User who completed the task.
 track_time | Object | Time spent records.

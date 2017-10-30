@@ -38,6 +38,10 @@ due_begin | Optional | No | Date | Only tasks having a due date, and with due da
 due_end | Optional | No | Date | Only tasks having a due date equal or before 'due_end' will be returned.
 cpl_begin | Optional | No | Date | Only completed tasks, and with a completion date equal of after 'cpl_begin' will be returned. Tasks only partially completed will not be returned.
 cpl_end | Optional | No | Date | Only tasks having a completion date equal or before 'cpl_end' will be returned.
+crea_begin | Optional | No | Date | Only tasks that have a creation date equal or after 'crea_begin' will be returned.
+crea_end | Optional | No | Date | Only tasks that have a creation date equal or before 'crea_end' will be returned.
+mod_begin | Optional | No | Date | Only tasks that have a last-modification date equal or after 'mod_begin' will be returned.
+mod_end | Optional | No | Date | Only tasks that have a last-modification date equal or before 'mod_end' will be returned.
 
 
 [1] Can the GET parameter be provided several times. If Yes, the
@@ -72,6 +76,7 @@ description | String | Task description.
 list | [TaskList](../types/TaskList.md) | A TaskList object. The task list of the task.
 creation_date | DateTime | A DateTime object. Task creation date.
 creator | [SimpleUser](../types/SimpleUser.md) | A SimpleUser object. User who created the task.
+modification_date | DateTime | A DateTime object. Task modification date. 
 completion_date | DateTime | A DateTime object. Task completion date.
 completed_by | [SimpleUser](../types/SimpleUser.md) | A SimpleUser object. User who completed the task.
 track_time | Object | Time spent records.
