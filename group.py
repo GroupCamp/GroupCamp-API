@@ -77,6 +77,8 @@ def new_project(name, description, access, guests, gcat_name, management_team):
 #				'others'  : 1, # Will copy the other files
 #			}
 #		},
+#		'subtype' : 'customer', # or 'internal'
+#		'orga' : '<the_uuid_of_the_orga>', # only for 'customer' projects
 		'management_team' : team_uuid
 	}
 	body = json.dumps(data)
@@ -118,6 +120,35 @@ def change_project(uuid, name, description, access, guests):
 	if debug :
 		print "Status ",status
 		print "Raw answer ",body
+
+	if status != 200 :
+		print "Failed"
+		if data['error'] == 'bad_request' :
+			print "Bad request"
+			if data['errors'][0]['field'] == 'name' and data['errors'][0]['error'] == 'already_use' :
+				print "Duplicate name in project modification"
+		return 'failed';
+	else :
+		print "Modification successful, groupe ID is " + data['result']['id']
+		return data['result']['id']
+
+def change_projet_tags(uuid, name, tags):
+	data = {
+		'name' : name,
+		'tags_names': tags
+	}
+	body = json.dumps(data)
+	pp.pprint(data)
+
+	res = do_call('POST', '/core/v1/group/project/'+uuid, body)
+	status = res.status
+	body = res.read()
+	data = json.loads(body)
+
+	if debug :
+		print "Status ",status
+		print "Raw answer ",body
+		pp.pprint(data)
 
 	if status != 200 :
 		print "Failed"
@@ -174,6 +205,7 @@ group_id = new_project('The new group 3', 'This group have been created via the 
 if group_id != 'failed' :
 	insert_user(group_id, user_email)
 	change_project(group_id, 'Another name', 'The description is modified', 'open', True)
+	change_project_tags(group_id, 'Another name', [ 'Tag one', 'Test tag' ])
 
 print "The user '"+user_email+"' is a member of the following teams:"
 user_teams(user_email)

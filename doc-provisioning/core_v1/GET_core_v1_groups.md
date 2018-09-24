@@ -28,6 +28,7 @@ name | Optional | No | String | Any group having exactly this name will be retur
 search | Optional | No | String | Groups where the string matches the group name will be returned.
 user | Optional | No | Uuid | Groups were the user is a member will be returned.
 category_name | Optional | No | String | Groups in that group category will be returned. Category name is case sensitive.
+tag_name | Optional | Yes | String | Only groups having all of the cited tags are returned. If an empty string is provided as a tag name, only groups with no tags are returned. Providing at the same time an empty string *and* a normal string will search for groups having, at the same time, no tag (the empty string) and the regular tag. Result will then be empty.
 project_type | Optional | No | Enum(internal, customer) | Only project groups will be returned, and only if their project_type is matching.
 state | Optional | Yes | Enum(all, ok, archi, del, trash) | When the filter is not set, only group with the 'ok' status will be returned. When the filter is set, only groups with the given status will be returned.
 

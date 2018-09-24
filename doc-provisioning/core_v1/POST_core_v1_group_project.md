@@ -31,10 +31,13 @@ external_ref | Optional | String | External unique reference. This is your app r
 project_code | Optional | String | Project code. Must be unique. Set to an empty value to remove an existing Project code.
 description | Optional | String | Group description.
 category_name | Optional | String | Project group category. You must select an existing group category from your GroupCamp account. Group category is case-sensitive. A setting located in the GroupCamp Admin panel decides is the field is mandatory or not.
+tags_names | Optional | Array(String) | The tags added to the project. Tags used here but are created if they do not yet exist. If an empty list is provided while editing a group, all the tags are removed. If no list is provided, tags are unchanged.
 leader1 | Optional | Uuid | Project manager 1 UUID.
 leader2 | Optional | Uuid | Project manager 2 UUID (assistant).
 managers | Optional | Array(Uuid) | UUIDs of other additional project managers (must be employees, cannot be guests).
 management_team | Optional | Uuid | UUID of the managing team if there is one for that project. Members of the team who are also members of the project will have the 'group manager' privilege. Use the value 'none' instead of an UUID to remove a management team from the project.
+subtype | Optional | Enum(internal, customer) | Is this an internal project ?
+orga | Optional | Uuid | Organisation UUID, mandatory if subtype is "customer"
 access | Optional | Enum(invite, open) | Group access. Open to all colleagues or By invitation only.
 with_guests | Optional | Boolean | True when the group can have guest members.
 template | Optional | Object | To use a group as a template
@@ -66,7 +69,10 @@ id | Uuid | Group UUID.
 name | String | Group name.
 type | Const( = group ) | Constant. Must be 'group'.
 gtype | Enum(project, intranet, extranet) | Type of group.
+subtype | Enum(internal, customer) | Is this an internal project ?
+orga | Uuid | The UUID of the customer's company, if the project's subtype is 'customer'
 state | Enum(archi, ok, del, trash) | Current group status.
+tags_names | Array(String) | The names on the tags which are on the group.
 description | String | Group description.
 starred | Integer | When the group is starred for current user, returns the index order of the group in the list of starred groups for current user.
 can_accept_guest | Boolean | True when the group can have guest members.

@@ -62,6 +62,8 @@ nb_users | Integer | Number of group members.
 dates | Object | Project dates.
 dates.start | Date | Project start date
 dates.end | Date | Project end date
+rich_tags | Array([STag](../types/STag.md)) | Group's tags
+tags_names | Array(String) | Group's tags names
 
   
 
