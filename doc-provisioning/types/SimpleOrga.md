@@ -7,10 +7,10 @@
 
 Name    |   Type  |  Description
 --------|---------|-------------
-id | Uuid | Organization UUID.
-name | String | Organization name. As shown in the UI. May contain the names of the up-stream organizations.
+id | Uuid | Organisation UUID.
+name | String | Organisation name. As shown in the UI. May contain the names of the up-stream organisations.
 type | Const( = orga ) | Constant. Must be 'orga'.
-otype | Enum(internal, invited) | Organization type.
-state | Enum(ok, del) | Current organization status.
+otype | Enum(internal, invited) | Organisation type.
+state | Enum(ok, del) | Current organisation status.
 
 

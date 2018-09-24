@@ -21,7 +21,7 @@ Expected values
 
 Name   | Type    | Description
 -------|---------|------------
-Orga | Uuid | A (sub-)organization UUID.
+Orga | Uuid | An organisation UUID.
 
 
 
