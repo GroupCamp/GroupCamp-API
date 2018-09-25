@@ -44,7 +44,7 @@ Here are the usual problems:
   will consider the key/secret pair is invalid, please contact the
   GroupCamp support to re-enable the API access on your account.
 * The key have been deleted: if you delete the key (and its associated
-  secret, it will immediately be rejected.
+  secret), it will immediately be rejected.
 * The key used is for another application: if you declare a key/secret
   pair for the `reporting` API, you cannot use it for the `provisioning`
   API, it will be rejected during the authentication, because the key
