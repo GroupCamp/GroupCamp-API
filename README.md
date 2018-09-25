@@ -1,5 +1,7 @@
 # GroupCamp REST API
 
+See the [Release notes](ChangeLog.md) for recent updates.
+
 You'll find here some pieces of code showing how to use the
 GroupCamp public provisioning and reporting REST APIs.
 
