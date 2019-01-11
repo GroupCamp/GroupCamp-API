@@ -29,7 +29,9 @@ key.
 
 > Authorization: GCMP `key`:`signature`
 
-See an example in python in [group.py](../../group.py)
+See an example in python in [group.py](group.py)
+
+See an example in JavaScript in [task.js](task.js)
 
 # Possible errors
 
