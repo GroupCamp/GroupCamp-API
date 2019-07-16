@@ -12,11 +12,15 @@ this page: https://www.groupcamp.com/h/introduction-groupcamp-api
 
 * group.py shows, based on standard Python libraries, how to create
   a project and add users in that project.
-* track.py shows how to fetch timei spent records from the GroupCamp
+* track.py shows how to fetch time spent records from the GroupCamp
   account
 * task.py shows how to fetch informations about items with 
   the reporting API (typicaly when a time spent record is attached
-  to as task)
+  to a task)
+* report.py shows how to fetch consolidated informations about your
+  projects with the reporting API
+* budget.py shows how to fetch detailed informations about the budget
+  of a project
 
 ## Interfaces:
 
