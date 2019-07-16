@@ -50,9 +50,8 @@ gtype | Enum(project, intranet, extranet) | Group type.
 state | Enum(archi, ok, del, trash) | Current group status.
 description | String | Group description.
 orga | [SimpleOrga](../types/SimpleOrga.md) | Client company associated to the group.
-leader1 | [SimpleUser](../types/SimpleUser.md) | Project manager 1 of the group.
-leader2 | [SimpleUser](../types/SimpleUser.md) | Project manager 2 (assistant) of the group.
-managing_team | [SimpleTeam](../types/SimpleTeam.md) | Management team of the project.
+leader1 | [SimpleUser](../types/SimpleUser.md) | Project leader 1 of the group (The user must be a project manager).
+leader2 | [SimpleUser](../types/SimpleUser.md) | Project leader 2 (assistant) of the group (The user must be a project manager).
 category | [SimpleGcat](../types/SimpleGcat.md) | Group category.
 access | Enum(open, invited) | Group access status.
 users | Array([SimpleUser](../types/SimpleUser.md)) | An Array of SimpleUser objects. List of group members.

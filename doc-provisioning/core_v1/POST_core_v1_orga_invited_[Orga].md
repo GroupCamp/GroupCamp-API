@@ -15,6 +15,16 @@ Modifies an invited organisation
 
 
 
+## URL parameters
+
+Expected values
+
+Name   | Type    | Description
+-------|---------|------------
+Orga | Uuid | The UUID of the organisation to be modified
+
+
+
 
 
 

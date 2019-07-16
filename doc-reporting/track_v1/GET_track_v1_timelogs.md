@@ -61,7 +61,7 @@ user.maybe[0] | [Nobody](../types/Nobody.md) | Alternative
 user.maybe[1] | [SimpleUser](../types/SimpleUser.md) | Alternative
 time_unit | Enum(s, d) | The default time_unit to use. Depends on the request you made. For example, on a user based request, it will be the time unit for the user. On a project based request, it will be the project time unit.
 duration | [Duration](../types/Duration.md) | Time spent record duration.
-creation_date | DateTime | Record  creation date.
+creation_date | DateTime | Record creation date.
 modification_date | DateTime | Record update date.
 modification_user | [SimpleUser](../types/SimpleUser.md) | User who last updated the record.
 billable | Boolean | True when the time spent record is billable. Null if not applicable.

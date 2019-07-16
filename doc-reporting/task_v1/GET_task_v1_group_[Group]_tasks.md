@@ -71,6 +71,7 @@ Mechanism used: `next`
 Name   |  Type   |  Description
 -------|---------|-------------
 id | Uuid | Task UUID.
+permalink | String | The permanent link to the object.
 name | String | Task name.
 description | String | Task description.
 list | [TaskList](../types/TaskList.md) | A TaskList object. The task list of the task.
@@ -99,6 +100,7 @@ end.maybe[1].date | Date | The due date of the related milestone.
 end.maybe[1].id | Uuid | Milestone UUID. The milestone is linked to the TaskList where the task is.
 end.maybe[2] | Object | Alternative
 end.maybe[2].type | Const( = empty ) | Constant. Set to 'empty' when the task has no date.
+rich_tags | Array([STag](../types/STag.md)) | Task's tags
 
   
 

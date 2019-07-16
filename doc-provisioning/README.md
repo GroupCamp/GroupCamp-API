@@ -12,7 +12,6 @@
 * [SimpleGcat](types/SimpleGcat.md)
 * [SimpleGroup](types/SimpleGroup.md)
 * [SimpleOrga](types/SimpleOrga.md)
-* [SimpleTeam](types/SimpleTeam.md)
 * [SimpleUser](types/SimpleUser.md)
 
 

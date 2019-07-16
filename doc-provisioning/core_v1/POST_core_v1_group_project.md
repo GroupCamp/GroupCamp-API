@@ -35,7 +35,6 @@ tags_names | Optional | Array(String) | The tags added to the project. Tags used
 leader1 | Optional | Uuid | Project manager 1 UUID.
 leader2 | Optional | Uuid | Project manager 2 UUID (assistant).
 managers | Optional | Array(Uuid) | UUIDs of other additional project managers (must be employees, cannot be guests).
-management_team | Optional | Uuid | UUID of the managing team if there is one for that project. Members of the team who are also members of the project will have the 'group manager' privilege. Use the value 'none' instead of an UUID to remove a management team from the project.
 subtype | Optional | Enum(internal, customer) | Is this an internal project ?
 orga | Optional | Uuid | Organisation UUID, mandatory if subtype is "customer"
 access | Optional | Enum(invite, open) | Group access. Open to all colleagues or By invitation only.
