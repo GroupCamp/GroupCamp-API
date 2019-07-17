@@ -66,4 +66,4 @@ def get_budget(uuid) :
 	data = json.loads(body)
 	pp.pprint(data)
 
-get_budget('1cGVyc29uOmdyb3VwLzc3MzA5NDExMzQ5')
+get_budget('The group UUID found in the information panel of the project')
