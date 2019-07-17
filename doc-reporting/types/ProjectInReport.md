@@ -15,5 +15,6 @@ leader1 | [SimpleUser](../types/SimpleUser.md) | Project leader 1 (The user must
 leader2 | [SimpleUser](../types/SimpleUser.md) | Project leader 2 (Assistant, the user must be a project manager).
 rich_tags | Array([STag](../types/STag.md)) | Group's tags
 tags_names | Array(String) | Group's tags names
+dates | [Dates](../types/Dates.md) | Project dates.
 
 

@@ -58,9 +58,7 @@ users | Array([SimpleUser](../types/SimpleUser.md)) | An Array of SimpleUser obj
 description_color | Enum(default, green, orange, red) | The color to use for the description background.
 can_accept_guest | Boolean | True when the group can have guest members.
 nb_users | Integer | Number of group members.
-dates | Object | Project dates.
-dates.start | Date | Project start date
-dates.end | Date | Project end date
+dates | [Dates](../types/Dates.md) | Project dates.
 rich_tags | Array([STag](../types/STag.md)) | Group's tags
 tags_names | Array(String) | Group's tags names
 

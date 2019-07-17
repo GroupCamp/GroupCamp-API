@@ -27,7 +27,7 @@ this page: https://www.groupcamp.com/h/introduction-groupcamp-api
 * The [Provisioning](doc-provisioning/README.md) API allows to create items
   in your GroupCamp account (create projects, add users in projects, etc)
 * The [Reporting](doc-reporting/README.md) is the API to get some reports from
-  your GroupCamp account (get tasks, task lists, milestones, spent time records,
-  and related informations)
+  your GroupCamp account (get tasks, task lists, milestones, time spent records,
+  project reports, budgets, and related informations)
 
 

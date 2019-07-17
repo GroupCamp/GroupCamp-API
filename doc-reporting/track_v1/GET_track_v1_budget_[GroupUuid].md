@@ -13,6 +13,8 @@ https://api.groupcamp.com/track/v1/budget/[GroupUuid]
 
 Returns the current budget for the projet, if there is a valid budget available.
 
+More informations about times and cost computations are available on [../../TimeCost.md](About times, cost and computations).
+
 
 
 ## URL parameters

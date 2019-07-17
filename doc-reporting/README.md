@@ -12,6 +12,7 @@
 * [Budget](types/Budget.md)
 * [BudgetInReport](types/BudgetInReport.md)
 * [BudgetLine](types/BudgetLine.md)
+* [Dates](types/Dates.md)
 * [Duration](types/Duration.md)
 * [Milestone](types/Milestone.md)
 * [Nobody](types/Nobody.md)

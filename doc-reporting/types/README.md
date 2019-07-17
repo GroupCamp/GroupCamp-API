@@ -5,6 +5,7 @@
 * [Budget](./Budget.md)
 * [BudgetInReport](./BudgetInReport.md)
 * [BudgetLine](./BudgetLine.md)
+* [Dates](./Dates.md)
 * [Duration](./Duration.md)
 * [Milestone](./Milestone.md)
 * [Nobody](./Nobody.md)

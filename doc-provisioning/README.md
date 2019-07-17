@@ -8,6 +8,7 @@
 
 ## Data types
 
+* [Dates](types/Dates.md)
 * [STag](types/STag.md)
 * [SimpleGcat](types/SimpleGcat.md)
 * [SimpleGroup](types/SimpleGroup.md)
