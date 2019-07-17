@@ -1,5 +1,11 @@
 # GroupCamp API Release notes
 
+2019-07-16 - Updates for GroupCamp v3 and new API verbs
+
+* There is no more `managing_team` associated with a group.
+* Published the API to fetch informations about the budget of a project.
+* Published the API to fetch the report on projects.
+
 2018-09-25 - Managing organizations (Companies)
 
 * Published the API to create, get, edit and list invited organizations (aka
