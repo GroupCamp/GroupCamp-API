@@ -13,7 +13,7 @@ https://api.groupcamp.com/track/v1/report
 
 Returns the current global report for the projets selected according to the GET parameters. If no GET parameter is provided, all the active projects are selected.
 
-More informations about times and cost computations are available on [About times. cost and computations](../../TimeCost.md).
+More informations about durations and cost computations are available on [About durations, cost and computations](../../TimeCost.md).
 
 
 
